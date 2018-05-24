@@ -90,8 +90,8 @@ help_message <- function(id, help_dir){
 #' @param output The output object of your shiny app
 #' @param help_dir A character string of the directory containing your helpfiles
 #' @examples 
-#' \dontrun{use_helpers(input, output, "helpfiles")}
-use_helpers <- function(input, output, help_dir = "helpfiles") {
+#' \dontrun{watch_helpers(input, output, "helpfiles")}
+watch_helpers <- function(input, output, help_dir = "helpfiles") {
   
   shiny::observe({
     
@@ -103,4 +103,11 @@ use_helpers <- function(input, output, help_dir = "helpfiles") {
     
   })
   
+}
+
+#' Function to go in ui.R to use the package
+#' @export
+#' @param ... options to pass to shinyjs::useShinyjs
+use_shinyhelper <- function(...){
+  shinyjs::useShinyjs(...)
 }

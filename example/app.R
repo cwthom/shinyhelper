@@ -7,7 +7,6 @@
 
 library(shiny)
 library(magrittr)
-library(shinyjs)
 library(shinyhelper)
 
 # User Interface ----------------------------------------------------------
@@ -15,7 +14,7 @@ library(shinyhelper)
 ui <- fluidPage(
   
   # need to use Shinyjs
-  useShinyjs(),
+  use_shinyhelper(),
   
   # title of demo app
   titlePanel(title = "ShinyHelper Demo"),
@@ -57,7 +56,7 @@ ui <- fluidPage(
 server <- function(input, output, session) {
   
   # use helpfiles
-  use_helpers(input, output, help_dir = "helpfiles")
+  watch_helpers(input, output, help_dir = "helpfiles")
   
   # demo app for kmeans clustering taken from 
   # https://shiny.rstudio.com/gallery/kmeans-example.html
