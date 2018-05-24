@@ -1,5 +1,7 @@
 .Rproj.user
+.Rbuildignore
 .Rhistory
 .RData
 .Ruserdata
 rsconnect/
+example/rsconnect
