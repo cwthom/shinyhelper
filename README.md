@@ -1,5 +1,7 @@
 # shinyhelper
 
+[![Travis-CI Build Status](https://travis-ci.org/cwthom/shinyhelper.svg?branch=master)](https://travis-ci.org/cwthom/shinyhelper)
+
 Easily add help documentation to shiny inputs and outputs, using markdown files.
 
 The advantages of using this package are:
