@@ -38,6 +38,24 @@ helper <- function(shiny.tag){
   )
 }
 
+# helper function to create any blank markdown files which don't exist yet
+create_help_files <- function(ids, help_dir = "helpfiles") {
+  
+  for (id in ids) {
+    
+    file <- paste0(help_dir, "/", gsub("-msg$", "", id), ".md")
+  
+    if (!file.exists(file)) {
+      file.create(file)
+      writeLines(text = c(paste0("### ", gsub("-msg$", "", id), " - Under Development \n"),
+                          "*** \n",
+                          "This helpfile is currently under development. \n"),
+                 con = file)
+    }
+  }
+}
+
+
 # function for producing a help message when the question mark is clicked
 help_message <- function(id, help_dir){
   
