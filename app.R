@@ -60,7 +60,7 @@ ui <- fluidPage(
 server <- function(input, output, session) {
   
   # use helpfiles
-  use_helpers(input, output)
+  use_helpers(input, output, help_dir = "helpfiles")
   
   # demo app for kmeans clustering taken from 
   # https://shiny.rstudio.com/gallery/kmeans-example.html

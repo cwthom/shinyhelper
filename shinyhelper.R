@@ -39,11 +39,12 @@ helper <- function(shiny.tag){
 }
 
 # function for producing a help message when the question mark is clicked
-help_message <- function(id){
+help_message <- function(id, help_dir){
   
+  file <- paste0(help_dir, "/", gsub("-msg$", "", id), ".md")
   
-  if (file.exists(paste0("helpfiles/", gsub("-msg$", "", id), ".md"))) {
-    content <- includeMarkdown(paste0("helpfiles/", gsub("-msg$", "", id), ".md"))
+  if (file.exists(file)) {
+    content <- includeMarkdown(file)
     title <- NULL
   } else {
     content <- "We're sorry, there doesn't seem to be a helpfile for this yet!"
@@ -64,7 +65,13 @@ help_message <- function(id){
 }
 
 # helper function to go in server.R to use the help messages
-use_helpers <- function(input, output) {
+use_helpers <- function(input, output, help_dir = "helpfiles") {
+  
+  if (!dir.exists(help_dir)) {
+    message(paste0("Creating empty help directory called ", help_dir, "..."))
+    message("TODO: populate the folder with .md files!")
+    dir.create(help_dir)
+  }
   
   observe({
     
@@ -72,7 +79,7 @@ use_helpers <- function(input, output) {
     output_questions <- names(output)[grepl("-msg$", names(output))]
     questions <- c(input_questions, output_questions)
     
-    lapply(questions, help_message)
+    lapply(questions, help_message, help_dir = help_dir)
     
   })
   
