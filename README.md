@@ -28,3 +28,9 @@ Until the package becomes available on CRAN, you can use the `devtools` package 
 ```
 devtools::install_github('cwthom/shinyhelper')
 ```
+## Demo
+
+To run a demo of the functionality this brings, install the package and then use:
+```
+shiny::runGitHub(repo = "cwthom/shinyhelper", subdir = "example")
+```
