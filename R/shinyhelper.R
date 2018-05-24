@@ -21,12 +21,17 @@ helper <- function(shiny.tag){
   
   id <- get_id(shiny.tag)
   
-  res <- shiny::div(shiny.tag, 
-                    shiny::actionButton(inputId = paste0(id, "-msg"), 
-                                        label = NULL,
-                                        icon = shiny::icon("question-circle-o"),
-                                        class = "shiny-helper-question"),
-                    style = "position: relative;"
+  shiny::tagList(
+    shiny::singleton(
+      shiny::tags$head(shiny::tags$link(rel="stylesheet", href = "css-helper/shinyhelper.css"))
+    ),
+    shiny::div(class = "shiny-helper-container",
+               shiny.tag, 
+               shiny::actionButton(inputId = paste0(id, "-msg"), 
+                                   label = NULL,
+                                   icon = shiny::icon("question-circle-o"),
+                                   class = "shiny-helper-question")
+    )
   )
 }
 
@@ -87,12 +92,6 @@ help_message <- function(id, help_dir){
 #' @examples 
 #' \dontrun{use_helpers(input, output, "helpfiles")}
 use_helpers <- function(input, output, help_dir = "helpfiles") {
-  
-  if (!dir.exists(help_dir)) {
-    message(paste0("Creating empty help directory called ", help_dir, "..."))
-    message("TODO: populate the folder with .md files!")
-    dir.create(help_dir)
-  }
   
   shiny::observe({
     

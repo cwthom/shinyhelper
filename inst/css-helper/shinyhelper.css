@@ -1,4 +1,10 @@
-.helper {
+.shiny-helper-container {
+  
+  position: relative;
+  
+}
+
+.shiny-helper-question {
   
   position: absolute;
   top: 0;

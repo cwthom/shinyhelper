@@ -7,10 +7,8 @@
 
 library(shiny)
 library(magrittr)
-
-# Source functions --------------------------------------------------------
-
-source("shinyhelper.R")
+library(shinyjs)
+library(shinyhelper)
 
 # User Interface ----------------------------------------------------------
 
@@ -18,7 +16,6 @@ ui <- fluidPage(
   
   # need to use Shinyjs
   useShinyjs(),
-  includeCSS(path = "custom.css"),
   
   # title of demo app
   titlePanel(title = "ShinyHelper Demo"),
