@@ -4,10 +4,17 @@
 \alias{helper}
 \title{Augment a shiny.tag with a question mark helper button}
 \usage{
-helper(shiny.tag)
+helper(shiny.tag, icon = shiny::icon("question-circle-o"),
+  class = "shiny-helper-question", ...)
 }
 \arguments{
 \item{shiny.tag}{A shiny input or output object}
+
+\item{icon}{An icon created with shiny::icon()}
+
+\item{class}{A custom CSS class - defaults to shiny-helper-question}
+
+\item{...}{Other arguments to pass to shiny::actionButton}
 }
 \description{
 Augment a shiny.tag with a question mark helper button

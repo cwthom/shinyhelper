@@ -1,5 +1,4 @@
 #' Helper function to extract the id of a shiny element as a character string
-#' @export
 #' @param shiny.tag A shiny input or output object
 #' @examples
 #' \dontrun{get_id(shiny::actionButton(inputId = "button_id", label = "example"))}
@@ -15,9 +14,13 @@ get_id <- function(shiny.tag){
 #' Augment a shiny.tag with a question mark helper button
 #' @export
 #' @param shiny.tag A shiny input or output object
+#' @param icon An icon created with shiny::icon()
+#' @param class A custom CSS class - defaults to shiny-helper-question
+#' @param ... Other arguments to pass to shiny::actionButton
 #' @examples 
 #' \dontrun{plotOutput(outputId = "plot") %>% helper()}
-helper <- function(shiny.tag){
+helper <- function(shiny.tag, icon = shiny::icon("question-circle-o"),
+                   class = "shiny-helper-question", ...){
   
   id <- get_id(shiny.tag)
   
@@ -27,10 +30,11 @@ helper <- function(shiny.tag){
     ),
     shiny::div(class = "shiny-helper-container",
                shiny.tag, 
-               shiny::actionButton(inputId = paste0(id, "-msg"), 
+               shiny::actionButton(inputId = paste0(id, "-shinyhelper-msg"), 
                                    label = NULL,
-                                   icon = shiny::icon("question-circle-o"),
-                                   class = "shiny-helper-question")
+                                   icon = icon,
+                                   class = class,
+                                   ...)
     )
   )
 }
@@ -45,11 +49,12 @@ create_help_files <- function(ids, help_dir = "helpfiles") {
   
   for (id in ids) {
     
-    file <- paste0(help_dir, "/", gsub("-msg$", "", id), ".md")
+    file <- paste0(help_dir, "/", gsub("-shinyhelper-msg$", "", id), ".md")
   
     if (!file.exists(file)) {
       file.create(file)
-      writeLines(text = c(paste0("### ", gsub("-msg$", "", id), " - Under Development \n"),
+      writeLines(text = c(paste0("### ", gsub("-shinyhelper-msg$", "", id),
+                                 " - Under Development \n"),
                           "*** \n",
                           "This helpfile is currently under development. \n"),
                  con = file)
@@ -61,9 +66,24 @@ create_help_files <- function(ids, help_dir = "helpfiles") {
 #' Function for adding an onclick event to each helper, using shinyjs
 #' @param id The id of the shiny.tag this help applies to
 #' @param help_dir The directory in which to look for help files
-help_message <- function(id, help_dir){
+#' @param sizes An optional named list of sizes for the different input and output ids
+show_help_message <- function(id, help_dir = "helpfiles", sizes = "m"){
   
-  file <- paste0(help_dir, "/", gsub("-msg$", "", id), ".md")
+  id_name <- gsub("-shinyhelper-msg$", "", id)
+  
+  if (is.list(sizes)) {
+    if (id_name %in% names(sizes)) {
+      size <- sizes[[id_name]]
+      if (!(size %in% c("s", "m", "l"))) {
+        warning("Sizes must be one of 's', 'm', 'l'; defaulting to 'm'.")
+        size <- "m"
+      }
+    } else {
+      size <- "m"
+    }
+  }
+
+  file <- paste0(help_dir, "/", id_name, ".md")
   
   if (file.exists(file)) {
     content <- shiny::includeMarkdown(file)
@@ -78,7 +98,7 @@ help_message <- function(id, help_dir){
       shiny::modalDialog(content, 
                          title = title,
                          footer = shiny::modalButton("Okay"),
-                         size = "m")
+                         size = size)
       )
     }
   )
@@ -86,20 +106,21 @@ help_message <- function(id, help_dir){
 
 #' Function to go in server.R to use the help messages
 #' @export
-#' @param input The input object of your shiny app
-#' @param output The output object of your shiny app
+#' @param input The input object in your shiny app
+#' @param output The output object in your shiny app
 #' @param help_dir A character string of the directory containing your helpfiles
+#' @param sizes An optional named list of sizes for the input/output ids
 #' @examples 
-#' \dontrun{watch_helpers(input, output, "helpfiles")}
-watch_helpers <- function(input, output, help_dir = "helpfiles") {
+#' \dontrun{observe_helpers(input, output, "helpfiles")}
+observe_helpers <- function(input, output, help_dir = "helpfiles", sizes = "m") {
   
   shiny::observe({
     
-    input_questions  <- names(input)[grepl("-msg$", names(input))]
-    output_questions <- names(output)[grepl("-msg$", names(output))]
+    input_questions  <- names(input)[grepl("-shinyhelper-msg$", names(input))]
+    output_questions <- names(output)[grepl("-shinyhelper-msg$", names(output))]
     questions <- c(input_questions, output_questions)
     
-    lapply(questions, help_message, help_dir = help_dir)
+    lapply(questions, show_help_message, help_dir = help_dir, sizes = sizes)
     
   })
   
