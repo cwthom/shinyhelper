@@ -27,7 +27,7 @@ ui <- fluidPage(
       
       selectInput(inputId = "xcol", label = "X Variable",
                   choices = names(iris)) %>% 
-        helper(),
+        helper(icon = icon("question")),
       
       selectInput(inputId = "ycol", "Y Variable",
                   choices = names(iris),
@@ -36,7 +36,7 @@ ui <- fluidPage(
       
       sliderInput(inputId = "clusters", "Cluster count",
                   value = 3, min = 1, max = 9) %>% 
-        helper()
+        helper(icon = icon("exclamation"), style = "color: red;")
       
     ),
     
@@ -56,7 +56,8 @@ ui <- fluidPage(
 server <- function(input, output, session) {
   
   # use helpfiles
-  watch_helpers(input, output, help_dir = "helpfiles")
+  observe_helpers(input = input, output = output,
+                  help_dir = "helpfiles", sizes = list(kmeans = "l", ycol = "s"))
   
   # demo app for kmeans clustering taken from 
   # https://shiny.rstudio.com/gallery/kmeans-example.html
