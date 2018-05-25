@@ -7,7 +7,7 @@
 #' There is also a convenient helper function to initialise a directory of markdown
 #' files given a vector of input and output IDs.
 #' 
-#' For further reference on how to use the package, please refer to ...
+#' For further reference on how to use the package, please refer to https://github.com/cwthom/shinyhelper
 #' 
 #' @name shinyhelper
 #' @docType package
