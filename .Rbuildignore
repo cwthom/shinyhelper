@@ -1,0 +1,7 @@
+^packrat/
+^\.Rprofile$
+^.*\.Rproj$
+^\.Rproj\.user$
+^\.Rhistory$
+^example/
+^\.travis\.yml$
