@@ -8,6 +8,7 @@ The advantages of using this package are:
 
 * add help files with a single extra function call
 * leverage the formatting power of markdown to go beyond simple tooltips
+* customise the appearance and positioning of the help icons, and the size of help pages
 * additional function to quickly create a suitable directory of markdown files
 
 You can add help files to any shiny input or output, with a simple call to `helper()`:
