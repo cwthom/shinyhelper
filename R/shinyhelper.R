@@ -47,14 +47,15 @@ helper <- function(shiny.tag, icon = shiny::icon("question-circle-o"),
 #' @param help_dir A character string of the directory to use for help files
 create_help_files <- function(ids, help_dir = "helpfiles") {
   
+  if (!dir.exists(help_dir)) dir.create(help_dir)
+  
   for (id in ids) {
     
-    file <- paste0(help_dir, "/", gsub("-shinyhelper-msg$", "", id), ".md")
+    file <- paste0(help_dir, "/", id, ".md")
   
     if (!file.exists(file)) {
       file.create(file)
-      writeLines(text = c(paste0("### ", gsub("-shinyhelper-msg$", "", id),
-                                 " - Under Development \n"),
+      writeLines(text = c(paste("###", id, "- Under Development \n"),
                           "*** \n",
                           "This helpfile is currently under development. \n"),
                  con = file)

@@ -5,3 +5,4 @@
 ^\.Rhistory$
 ^example/
 ^\.travis\.yml$
+^cran-comments\.md$
