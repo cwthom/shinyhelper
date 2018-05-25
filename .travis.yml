@@ -1,6 +1,9 @@
 # R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
 
 language: R
+os:
+  - osx
+  - linux
 r:
   - oldrel
   - release
@@ -12,5 +15,5 @@ git:
   depth: 3
   
 script:
-- R CMD build .
-- R CMD check *tar.gz
+  - R CMD build .
+  - R CMD check *tar.gz

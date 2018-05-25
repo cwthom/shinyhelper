@@ -5,5 +5,5 @@ Version: 0.0.0.9001
 Authors@R: person("Chris", "Thom", email = "christopher.thom@education.gov.uk", role=c("aut","cre"))
 Description: Creates a lightweight way to add markdown helpfiles to shiny apps, appearing in modalDialogs.
 License: GPL-3
-Imports: shiny, shinyjs, markdown
+Imports: shiny, shinyjs
 RoxygenNote: 6.0.1
