@@ -1,6 +1,6 @@
 Package: shinyhelper
 Type: Package
-Title: Easily Add Markdown Help Files to Shiny Inputs and Outputs
+Title: Easily Add Markdown Help Files to 'shiny' Inputs and Outputs
 Version: 0.1.1
 Authors@R: person("Chris", "Thom", email = "christopher.w.thom@outlook.com", role=c("aut","cre"))
 Description: Creates a lightweight way to add markdown helpfiles to 'shiny' apps,

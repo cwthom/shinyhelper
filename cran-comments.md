@@ -1,3 +1,15 @@
+## Resubmission - shinyhelper 0.1.1
+This is a resubmission. In this version I have:
+
+* Put software and package names in Title and Description in 'single quotes'
+* Unwrapped examples in Rd files
+* Removed examples from un-exported functions
+* Removed `%>%` from examples
+* Stopped writing to user's home filespace - the user must now specify a directory. Examples to be tested use `tempdir()`
+
+## R CMD Check
+There are no new ERRORs, WARNINGs or NOTEs in this resubmission.
+
 ## shinyhelper 0.1.1
 This is the first submission of this package.
 
