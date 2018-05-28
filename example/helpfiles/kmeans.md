@@ -11,4 +11,3 @@ For more information on kmeans clustering, see [the wikipedia page](https://en.w
 
 ***
 If you have image files in your help directory, you can include them in your markdown!
-![k-means-example](k-means-example.png)
