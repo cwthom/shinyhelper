@@ -57,9 +57,9 @@ plotOutput(outputId = "plot") %>% helper(style = "color: red;")
 
 ## Changing the Help Page Size
 
-By default, all help files are medium sized `modalDialog()` boxes (`size = "m"`). You can pass a named list of `sizes` to `watch_helpers()` to customise this. Any you do not provide will be medium.
+By default, all help files are medium sized `modalDialog()` boxes (`size = "m"`). You can pass a named list of `sizes` to `watch_helpers()` to customise this. Any you do not provide will be the size given by `default_size`.
 ```
-watch_helpers(input, output, sizes = list(xcol = "s", plot1 = "l"))
+observe_helpers(input, output, sizes = list(xcol = "s", plot1 = "l"), default_size = "m")
 ```
 
 ## Creating your Help Files

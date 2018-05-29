@@ -1,6 +1,11 @@
 ## Resubmission - shinyhelper 0.1.1
 This is a resubmission. In this version I have:
 
+* Unwrapped the first example in create_help_files.Rd, and omitted the second.
+
+## Resubmission - shinyhelper 0.1.1
+This is a resubmission. In this version I have:
+
 * Put software and package names in Title and Description in 'single quotes'
 * Unwrapped examples in Rd files
 * Removed examples from un-exported functions

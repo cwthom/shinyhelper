@@ -5,12 +5,7 @@
 #' @param ids A character vector of ids to use
 #' @param help_dir A character string of the directory to use for help files
 #' @examples 
-#' \dontshow{
 #' create_help_files(ids = c("xcol", "plot1"), help_dir = tempdir())
-#' }
-#' \donttest{
-#' create_help_files(ids = c("xcol", "plot1", help_dir = "helpfiles"))
-#' }
 create_help_files <- function(ids, help_dir) {
   
   if (!dir.exists(help_dir)) 

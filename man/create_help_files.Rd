@@ -19,10 +19,5 @@ help files (.md files) in help_dir, using the vector of ids. Pass it a vector
 of ids corresponding to the inputId and outputId in your shiny app
 }
 \examples{
-\dontshow{
 create_help_files(ids = c("xcol", "plot1"), help_dir = tempdir())
-}
-\donttest{
-create_help_files(ids = c("xcol", "plot1", help_dir = "helpfiles"))
-}
 }
