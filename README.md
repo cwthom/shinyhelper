@@ -1,6 +1,7 @@
 # shinyhelper
 
 [![Travis-CI Build Status](https://travis-ci.org/cwthom/shinyhelper.svg?branch=master)](https://travis-ci.org/cwthom/shinyhelper)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/shinyhelper)](https://cran.r-project.org/package=shinyhelper)
 
 Easily add help documentation to shiny inputs and outputs, using markdown files.
 
@@ -33,9 +34,20 @@ observe_helpers(input, output, ...)
 ```
 ## Installation
 
-Until the package becomes available on CRAN, you can use the `devtools` package to install from GitHub directly:
+**shinyhelper 0.1.1 now on CRAN!** Go to: [https://cran.r-project.org/package=shinyhelper](https://cran.r-project.org/package=shinyhelper) 
+You can install the package with:
+```
+install.packages("shinyhelper")
+```
+
+To get the latest development version, you can use the `devtools` package to install from GitHub directly:
 ```
 devtools::install_github('cwthom/shinyhelper')
+```
+
+In both cases, then load the package in with:
+```
+library(shinyhelper)
 ```
 ## Demo
 

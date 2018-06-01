@@ -1,8 +1,9 @@
 Package: shinyhelper
 Type: Package
 Title: Easily Add Markdown Help Files to 'shiny' Inputs and Outputs
-Version: 0.1.1
+Version: 0.1.1.9000
 Authors@R: person("Chris", "Thom", email = "christopher.w.thom@outlook.com", role=c("aut","cre"))
+BugReports: https://github.com/cwthom/shinyhelper/issues
 Description: Creates a lightweight way to add markdown helpfiles to 'shiny' apps,
     using modal dialog boxes, with no need to observe each help button separately.
 License: GPL-3
