@@ -27,7 +27,7 @@ ui <- fluidPage(
       
       selectInput(inputId = "xcol", label = "X Variable",
                   choices = names(iris)) %>% 
-        helper(icon = icon("question")),
+        helper(icon = icon("question"), colour = "green"),
       
       selectInput(inputId = "ycol", "Y Variable",
                   choices = names(iris),
