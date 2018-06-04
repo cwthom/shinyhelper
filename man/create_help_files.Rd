@@ -4,19 +4,20 @@
 \alias{create_help_files}
 \title{Helper function to be run interactively - it will initialise a directory of
 help files (.md files) in help_dir, using the vector of ids. Pass it a vector
-of ids corresponding to the inputId and outputId in your shiny app}
+of ids corresponding to the inputId and outputId in your shiny app.}
 \usage{
 create_help_files(ids, help_dir)
 }
 \arguments{
-\item{ids}{A character vector of ids to use}
+\item{ids}{A character vector of ids to use - must correspond to the \code{inputId} 
+and \code{outputId} of your shiny elements.}
 
-\item{help_dir}{A character string of the directory to use for help files}
+\item{help_dir}{A character string of the directory to use for help files.}
 }
 \description{
 Helper function to be run interactively - it will initialise a directory of
 help files (.md files) in help_dir, using the vector of ids. Pass it a vector
-of ids corresponding to the inputId and outputId in your shiny app
+of ids corresponding to the inputId and outputId in your shiny app.
 }
 \examples{
 create_help_files(ids = c("xcol", "plot1"), help_dir = tempdir())

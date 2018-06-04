@@ -1,15 +1,18 @@
 #' Helper function to be run interactively - it will initialise a directory of
 #' help files (.md files) in help_dir, using the vector of ids. Pass it a vector
-#' of ids corresponding to the inputId and outputId in your shiny app
+#' of ids corresponding to the inputId and outputId in your shiny app.
 #' @export
-#' @param ids A character vector of ids to use
-#' @param help_dir A character string of the directory to use for help files
+#' @param ids A character vector of ids to use - must correspond to the \code{inputId} 
+#'   and \code{outputId} of your shiny elements.
+#' @param help_dir A character string of the directory to use for help files.
 #' @examples 
 #' create_help_files(ids = c("xcol", "plot1"), help_dir = tempdir())
 create_help_files <- function(ids, help_dir) {
   
-  if (!dir.exists(help_dir)) 
-    stop(paste(help_dir, "does not appear to exist."))
+  if (!dir.exists(help_dir)){
+    message(paste0("Creating directory '", help_dir, "'."))
+    dir.create(help_dir)
+  }
   
   for (id in ids) {
     

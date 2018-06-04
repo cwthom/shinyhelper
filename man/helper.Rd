@@ -10,11 +10,12 @@ helper(shiny.tag, icon = shiny::icon("question-circle-o"),
 \arguments{
 \item{shiny.tag}{A shiny input or output object}
 
-\item{icon}{An icon created with shiny::icon()}
+\item{icon}{An icon created with \code{shiny::icon()}}
 
 \item{class}{A custom CSS class - defaults to shiny-helper-question}
 
-\item{colour}{Any valid CSS colour for the icon (if you pass a colour as a 'style' argument, 'colour' will be overruled)}
+\item{colour}{Any valid CSS colour for the icon (if you pass a colour 
+as a \code{style} argument, \code{colour} will be overruled)}
 
 \item{...}{Other arguments to pass to shiny::actionButton}
 }
