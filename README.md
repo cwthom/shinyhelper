@@ -34,6 +34,9 @@ observe_helpers(input, output, ...)
 # this allows the help buttons to work properly
 
 ```
+All you need now is a markdown helpfile named with your `inputId` or `outputId`.
+For example, if you have a `sliderInput()` with `inputId = "nclusters"`, its helpfile should be called *nclusters.md*.
+
 ## Installation
 
 **shinyhelper 0.1.1 now on CRAN!** Go to: [https://cran.r-project.org/package=shinyhelper](https://cran.r-project.org/package=shinyhelper) 
@@ -71,14 +74,16 @@ plotOutput(outputId = "plot") %>% helper(style = "color: red;")
 
 ## Changing the Help Page Size
 
-By default, all help files are medium sized `modalDialog()` boxes (`size = "m"`). You can pass a named list of `sizes` to `watch_helpers()` to customise this. Any you do not provide will be the size given by `default_size`.
+By default, all help files are medium sized `modalDialog()` boxes (`size = "m"`). You can pass a named list of `sizes` to `observe_helpers()` to customise this. Any you do not provide will be the size given by `default_size`.
 ```
 observe_helpers(input, output, sizes = list(xcol = "s", plot1 = "l"), default_size = "m")
 ```
 
 ## Creating your Help Files
 
-There is a helper function, `create_help_files()` to quickly create a directory of helpfiles from a vector of id names.
+There is a helper function, `create_help_files()` to quickly create a directory of helpfiles from a vector of id names. 
+
+Note that your helpfiles *must* have names corresponding to the `inputId`s and `ouputId`s of your 'shiny' inputs and outputs!
 ```
 # Run this interactively, not in a shiny app
 create_help_files(ids = c("xcol", "ycol", "clusters", "plot1"), 
