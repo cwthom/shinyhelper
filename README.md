@@ -1,4 +1,5 @@
-# shinyhelper
+# shinyhelper <img src="data-raw/logo.png" align="right"/>
+
 
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/shinyhelper)](https://cran.r-project.org/package=shinyhelper)
 [![](https://cranlogs.r-pkg.org/badges/shinyhelper)](https://cran.r-project.org/package=shinyhelper)
@@ -89,3 +90,10 @@ Note that your helpfiles *must* have names corresponding to the `inputId`s and `
 create_help_files(ids = c("xcol", "ycol", "clusters", "plot1"), 
                   help_dir = "helpfiles")
 ```
+
+## Credits
+
+Obviously, this package would not be possible (or indeed meaningful) without the incredible [shiny](https://github.com/rstudio/shiny) and [shinyjs](https://github.com/daattali/shinyjs) packages. Full credit to them for all the actual work!
+
+Many thanks also to [Guangchang Yu](https://github.com/GuangchuangYu) for the wonderful [hexSticker](https://github.com/GuangchuangYu/hexSticker) package!
+

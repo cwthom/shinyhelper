@@ -6,3 +6,4 @@
 ^example/
 ^\.travis\.yml$
 ^cran-comments\.md$
+^data-raw$
