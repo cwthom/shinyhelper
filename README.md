@@ -59,7 +59,15 @@ library(shinyhelper)
 
 To run a demo of the functionality this brings, install the package and then use:
 ```
-shiny::runGitHub(repo = "cwthom/shinyhelper", subdir = "example")
+shiny::runGitHub("cwthom/shinyhelper", subdir = "inst/example")
+```
+
+Alternatively, you can install the development version with `devtools::install_github`, and run:
+
+```
+library(shinyhelper)
+
+shinyhelperDemo()
 ```
 
 ## Changing the Icon Appearance
