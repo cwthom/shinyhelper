@@ -1,5 +1,9 @@
+#' Get Shiny Tag ID
+#' 
 #' Helper function to extract the id of a shiny element as a character string
+#' 
 #' @param shiny.tag A shiny input or output object
+#' 
 get_id <- function(shiny.tag){
   
   flat_tag <- unlist(shiny.tag)
@@ -10,12 +14,16 @@ get_id <- function(shiny.tag){
 }
 
 
-
-#' Function for adding an onclick event to each helper, using shinyjs
+#' Show Help Message
+#' 
+#' Function for adding a \code{shinyjs::onclick} event to each \code{\link{helper}},
+#' opening up a \code{shiny::modalDialog} containg a markdown file
+#' 
 #' @param id The id of the shiny.tag this help applies to
 #' @param help_dir The directory in which to look for help files
 #' @param sizes An optional named list of sizes for the different input and output ids
 #' @param default_size An optional default size, if other than 'm'
+#' 
 show_help_message <- function(id, help_dir = "helpfiles", sizes = "m", 
                               default_size = "m"){
   

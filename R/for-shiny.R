@@ -1,10 +1,15 @@
-#' Function to go in server.R to use the help messages
+#' Observe Helper Action Buttons
+#' 
+#' Function to create a family of \code{shinyjs::onclick} event handlers, observing 
+#' clicks on the \code{\link{helper}} action buttons.
+#' 
 #' @export
 #' @param input The input object in your shiny app
 #' @param output The output object in your shiny app
 #' @param help_dir A character string of the directory containing your helpfiles
 #' @param sizes An optional named list of sizes for the input/output ids
 #' @param default_size A default size to be passed to show_help_message, one of "s", "m", "l"
+#' 
 #' @examples
 #' server <- function(input, output, session){
 #' 
@@ -15,6 +20,7 @@
 #'   # ...
 #'   # ...
 #' }
+#' 
 observe_helpers <- function(input, output, help_dir = "helpfiles", sizes = "m",
                             default_size = "m") {
   

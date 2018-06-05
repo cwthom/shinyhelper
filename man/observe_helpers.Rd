@@ -2,7 +2,7 @@
 % Please edit documentation in R/for-shiny.R
 \name{observe_helpers}
 \alias{observe_helpers}
-\title{Function to go in server.R to use the help messages}
+\title{Observe Helper Action Buttons}
 \usage{
 observe_helpers(input, output, help_dir = "helpfiles", sizes = "m",
   default_size = "m")
@@ -19,7 +19,8 @@ observe_helpers(input, output, help_dir = "helpfiles", sizes = "m",
 \item{default_size}{A default size to be passed to show_help_message, one of "s", "m", "l"}
 }
 \description{
-Function to go in server.R to use the help messages
+Function to create a family of \code{shinyjs::onclick} event handlers, observing 
+clicks on the \code{\link{helper}} action buttons.
 }
 \examples{
 server <- function(input, output, session){
@@ -31,4 +32,5 @@ server <- function(input, output, session){
   # ...
   # ...
 }
+
 }

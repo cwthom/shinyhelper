@@ -2,7 +2,7 @@
 % Please edit documentation in R/no-export.R
 \name{show_help_message}
 \alias{show_help_message}
-\title{Function for adding an onclick event to each helper, using shinyjs}
+\title{Show Help Message}
 \usage{
 show_help_message(id, help_dir = "helpfiles", sizes = "m",
   default_size = "m")
@@ -17,5 +17,6 @@ show_help_message(id, help_dir = "helpfiles", sizes = "m",
 \item{default_size}{An optional default size, if other than 'm'}
 }
 \description{
-Function for adding an onclick event to each helper, using shinyjs
+Function for adding a \code{shinyjs::onclick} event to each \code{\link{helper}},
+opening up a \code{shiny::modalDialog} containg a markdown file
 }
