@@ -20,7 +20,7 @@ as a \code{style} argument, \code{colour} will be overruled)}
 \item{...}{Other arguments to pass to shiny::actionButton}
 }
 \description{
-Augment a shiny.tag with a question mark helper button
+Add an action button to your shiny UI with a question mark help icon (by default).
 }
 \examples{
 helper(shiny::actionButton(inputId = "button1", label = "Click me!"))

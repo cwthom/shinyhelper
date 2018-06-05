@@ -1,11 +1,16 @@
 #' Augment a shiny.tag with a question mark helper button
+#' 
+#' Add an action button to your shiny UI with a question mark help icon (by default).
+#' 
 #' @export
+#' 
 #' @param shiny.tag A shiny input or output object
 #' @param icon An icon created with \code{shiny::icon()}
 #' @param class A custom CSS class - defaults to shiny-helper-question
 #' @param colour Any valid CSS colour for the icon (if you pass a colour 
 #'   as a \code{style} argument, \code{colour} will be overruled)
 #' @param ... Other arguments to pass to shiny::actionButton
+#' 
 #' @examples 
 #' helper(shiny::actionButton(inputId = "button1", label = "Click me!"))
 #' helper(shiny::plotOutput(outputId = "plot1"))

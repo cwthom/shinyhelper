@@ -2,7 +2,7 @@
 % Please edit documentation in R/no-export.R
 \name{get_id}
 \alias{get_id}
-\title{Helper function to extract the id of a shiny element as a character string}
+\title{Get Shiny Tag ID}
 \usage{
 get_id(shiny.tag)
 }
