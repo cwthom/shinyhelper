@@ -3,4 +3,5 @@
 export(create_help_files)
 export(helper)
 export(observe_helpers)
+export(shinyhelperDemo)
 export(use_shinyhelper)
