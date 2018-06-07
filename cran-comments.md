@@ -1,3 +1,20 @@
+# shinyhelper 0.2.0
+
+## Test Environments
+* local Windows 10, R 3.5.0
+* Ubuntu Trusty 14.04 (travis-ci): oldrel, release, devel
+* win-builder: devel
+
+## R CMD Check results
+There were no ERRORs, WARNINGs or NOTEs.
+
+## Further notes
+This is a new and updated version of the package, making it easier to use. Although it's only been 2 weeks since the first release, I wanted to build these features in to help the package take off quickly. I will stick to a slower release cycle for future releases.
+
+Thanks for your help.
+
+***
+
 ## Resubmission - shinyhelper 0.1.1
 This is a resubmission. In this version I have:
 
