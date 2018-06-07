@@ -36,7 +36,7 @@ observe_helpers(input, output, ...)
 
 ```
 All you need now is a markdown helpfile named with your `inputId` or `outputId`.
-For example, if you have a `sliderInput()` with `inputId = "nclusters"`, its helpfile should be called *nclusters.md*.
+For example, if you have a `sliderInput()` with `inputId = "nclusters"`, its helpfile should be called *nclusters.md*, unless you wish to change this using the `filename` argument - see below.
 
 ## Installation
 
