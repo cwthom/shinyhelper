@@ -19,4 +19,4 @@ sticker(subplot = "./data-raw/question-mark.png",
 
 shinyhelper <- magick::image_read("data-raw/shinyhelper.png")
 image_scale(shinyhelper, "150") %>%
-  image_write(path = "data-raw/logo.png", format = "png")
+  image_write(path = "man/figures/logo.png", format = "png")
