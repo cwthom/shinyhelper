@@ -6,8 +6,7 @@
 #' 
 #' @export
 #' 
-#' @param ids A character vector of ids to use - must correspond to the \code{inputId} 
-#'   and \code{outputId} of your shiny elements.
+#' @param ids A character vector of names to use in creating help files.
 #' @param help_dir A character string of the directory to use for help files.
 #' 
 #' @examples 

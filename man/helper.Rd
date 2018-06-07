@@ -26,6 +26,9 @@ as a \code{style} argument, \code{icon_colour} will be overruled)}
 }
 \description{
 Add an action button to your shiny UI with a question mark help icon (by default).
+In combination with \code{\link{use_shinyhelper}} and \code{\link{observe_helpers}}
+this action button will produce a \code{shiny::modalDialog} containing a markdown
+help file (of name \code{filename}).
 }
 \examples{
 helper(shiny::actionButton(inputId = "button1", label = "Click me!"))

@@ -7,8 +7,7 @@
 create_help_files(ids, help_dir)
 }
 \arguments{
-\item{ids}{A character vector of ids to use - must correspond to the \code{inputId} 
-and \code{outputId} of your shiny elements.}
+\item{ids}{A character vector of names to use in creating help files.}
 
 \item{help_dir}{A character string of the directory to use for help files.}
 }

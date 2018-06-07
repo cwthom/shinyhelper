@@ -2,15 +2,15 @@
 % Please edit documentation in R/for-shiny.R
 \name{use_shinyhelper}
 \alias{use_shinyhelper}
-\title{Function to go in ui.R to use the package - wrapper round shinyjs::useShinyjs()}
+\title{Use shinyhelper}
 \usage{
 use_shinyhelper(...)
 }
 \arguments{
-\item{...}{options to pass to shinyjs::useShinyjs}
+\item{...}{options to pass to \code{shinyjs::useShinyjs}}
 }
 \description{
-Function to go in ui.R to use the package - wrapper round shinyjs::useShinyjs()
+Function to go in ui.R to use the package - wrapper round \code{shinyjs::useShinyjs()}
 }
 \examples{
 ui <- shiny::fluidPage(
@@ -22,4 +22,5 @@ ui <- shiny::fluidPage(
   # ...
   # ...
 )
+
 }

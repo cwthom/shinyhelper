@@ -17,9 +17,9 @@ get_id <- function(shiny.tag){
 #' Show Help Message
 #' 
 #' Function for adding a \code{shinyjs::onclick} event to each \code{\link{helper}},
-#' opening up a \code{shiny::modalDialog} containg a markdown file
+#' opening up a \code{shiny::modalDialog} containing a markdown file.
 #' 
-#' @param id The id of the shiny.tag this help applies to
+#' @param id The id of the shinyhelper helper icon this help applies to
 #' @param help_dir The directory in which to look for help files
 #' 
 show_help_message <- function(id, help_dir = "helpfiles"){

@@ -7,11 +7,11 @@
 show_help_message(id, help_dir = "helpfiles")
 }
 \arguments{
-\item{id}{The id of the shiny.tag this help applies to}
+\item{id}{The id of the shinyhelper helper icon this help applies to}
 
 \item{help_dir}{The directory in which to look for help files}
 }
 \description{
 Function for adding a \code{shinyjs::onclick} event to each \code{\link{helper}},
-opening up a \code{shiny::modalDialog} containg a markdown file
+opening up a \code{shiny::modalDialog} containing a markdown file.
 }
