@@ -26,16 +26,18 @@ ui <- fluidPage(
       
       selectInput(inputId = "xcol", label = "X Variable",
                   choices = names(iris)) %>% 
-        helper(icon = icon("question"), colour = "green"),
+        helper(icon = icon("question"), icon_colour = "green",
+               filename = "Columns"),
       
       selectInput(inputId = "ycol", "Y Variable",
                   choices = names(iris),
                   selected = names(iris)[[2]]) %>% 
-        helper(),
+        helper(size = "s", filename = "Columns"),
       
       sliderInput(inputId = "clusters", "Cluster count",
                   value = 3, min = 1, max = 9) %>% 
-        helper(icon = icon("exclamation"), style = "color: red;")
+        helper(icon = icon("exclamation"), icon_colour = "red",
+               filename = "Clusters")
       
     ),
     
@@ -43,7 +45,7 @@ ui <- fluidPage(
     mainPanel = mainPanel(
       
       plotOutput(outputId = "kmeans") %>% 
-        helper()
+        helper(filename = "PlotHelp", size = "l")
       
     )
   )

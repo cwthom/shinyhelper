@@ -48,7 +48,7 @@ install.packages("shinyhelper")
 
 To get the latest development version, you can use the `devtools` package to install from GitHub directly:
 ```
-devtools::install_github('cwthom/shinyhelper')
+devtools::install_github("cwthom/shinyhelper")
 ```
 
 In both cases, then load the package in with:
@@ -72,32 +72,59 @@ shinyhelperDemo()
 
 ## Changing the Icon Appearance
 
+### Icon
+
 The icons are `shiny::icon("question-mark-o")` icons by default, but you can change them individually using the `icon` argument of `helper()`:
+
 ```
 plotOutput(outputId = "plot") %>% helper(icon = shiny::icon("exclamation"))
 ```
+
+### Colour
+
+You can change the icon colour with the `icon_colour` argument. Pass it any valid CSS colour as a character string.
+
+```
+plotOutput(outputId = "plot") %>% helper(icon_colour = "green")
+```
+
+### Other CSS
+
 By default, the icons have a custom CSS class, `shiny-helper-question` - you can override this with the `class` argument to helper and provider your own CSS class. You can also pass a `style` argument to modify CSS in-line:
 ```
 plotOutput(outputId = "plot") %>% helper(style = "color: red;")
 ```
+Note: Passing a colour in a `style` argument will override `icon_colour`.
 
 ## Changing the Help Page Size
 
-By default, all help files are medium sized `modalDialog()` boxes (`size = "m"`). You can pass a named list of `sizes` to `observe_helpers()` to customise this. Any you do not provide will be the size given by `default_size`.
+By default, all help files are medium sized `modalDialog()` boxes (`size = "m"`). You can change each one though, by passing the `size` argument to `helper()`:
+
 ```
-observe_helpers(input, output, sizes = list(xcol = "s", plot1 = "l"), default_size = "m")
+plotOutput(outputId = "plot") %>% helper(size = "l")
 ```
+
+## Naming your Help Files
+
+By default, shinyhelper will look for help files in a folder called "helpfiles", with the same names as your shiny `inputId`s and `outputId`s. To use custom names for your help pages, pass the `filename` argument to `helper()`:
+
+```
+plotOutput(outputId = "plot") %>% helper(filename = "MyAwesomeHelpPage")
+```
+
+Note: you don't need to put ".md" on your filename. If you do it will be ignored.
 
 ## Creating your Help Files
 
-There is a helper function, `create_help_files()` to quickly create a directory of helpfiles from a vector of id names. 
+There is a helper function, `create_help_files()` to quickly create a directory of helpfiles from a vector of names. 
 
-Note that your helpfiles *must* have names corresponding to the `inputId`s and `ouputId`s of your 'shiny' inputs and outputs!
 ```
 # Run this interactively, not in a shiny app
-create_help_files(ids = c("xcol", "ycol", "clusters", "plot1"), 
+create_help_files(ids = c("Clusters", "Columns", "PlotHelp"), 
                   help_dir = "helpfiles")
 ```
+
+***
 
 ## Credits
 
