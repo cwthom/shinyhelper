@@ -1,7 +1,15 @@
-# shinyhelper 0.1.1.9003
+### shinyhelper 0.1.1.9003
 
+New features:
 
-# shinyhelper 0.1.1.9002
+* can set sizes of help pages in `helper`, not named list in `observe_helpers()`
+* can set custom filename for help pages - no longer need to use inputId and outputId although that's still the default.
+
+Deprecated features:
+
+* `sizes` and `default_size` arguments to `observe_helpers()`
+
+### shinyhelper 0.1.1.9002
 
 New features:
 
@@ -9,7 +17,7 @@ New features:
 * better documentation of functions
 * dedicated function `shinyhelperDemo` to run example app
 
-# shinyhelper 0.1.1.9000
+### shinyhelper 0.1.1.9000
 
 New features:
 

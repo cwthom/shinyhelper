@@ -4,18 +4,23 @@
 \alias{helper}
 \title{Augment a shiny.tag with a question mark helper button}
 \usage{
-helper(shiny.tag, icon = shiny::icon("question-circle-o"),
-  class = "shiny-helper-question", colour = NULL, ...)
+helper(shiny.tag, filename = NULL, size = "m",
+  icon = shiny::icon("question-circle-o"), class = "shiny-helper-question",
+  icon_colour = NULL, ...)
 }
 \arguments{
 \item{shiny.tag}{A shiny input or output object}
+
+\item{filename}{A character string of the name of the helpfile you want to display}
+
+\item{size}{Either 's', 'm' or 'l' - the size of the modal dialog to display}
 
 \item{icon}{An icon created with \code{shiny::icon()}}
 
 \item{class}{A custom CSS class - defaults to shiny-helper-question}
 
-\item{colour}{Any valid CSS colour for the icon (if you pass a colour 
-as a \code{style} argument, \code{colour} will be overruled)}
+\item{icon_colour}{Any valid CSS colour for the icon (if you pass a colour 
+as a \code{style} argument, \code{icon_colour} will be overruled)}
 
 \item{...}{Other arguments to pass to shiny::actionButton}
 }
@@ -24,5 +29,6 @@ Add an action button to your shiny UI with a question mark help icon (by default
 }
 \examples{
 helper(shiny::actionButton(inputId = "button1", label = "Click me!"))
-helper(shiny::plotOutput(outputId = "plot1"))
+helper(shiny::plotOutput(outputId = "plot1"), size = "l", filename = "PlotHelp", 
+       icon_colour = "green")
 }

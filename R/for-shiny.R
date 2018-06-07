@@ -7,31 +7,38 @@
 #' @param input The input object in your shiny app
 #' @param output The output object in your shiny app
 #' @param help_dir A character string of the directory containing your helpfiles
-#' @param sizes An optional named list of sizes for the input/output ids
-#' @param default_size A default size to be passed to show_help_message, one of "s", "m", "l"
+#' @param sizes Deprecated - set sizes in \code{\link{helper}} instead
+#' @param default_size Deprecated - set sizes in \code{\link{helper}} instead
 #' 
 #' @examples
 #' server <- function(input, output, session){
 #' 
 #'   # use anywhere in your server.R script
-#'   observe_helpers(input, output, sizes = list(xcol = "s", plot1 = "l"))
+#'   observe_helpers(input, output)
 #'   
 #'   # rest of server.R
 #'   # ...
 #'   # ...
 #' }
 #' 
-observe_helpers <- function(input, output, help_dir = "helpfiles", sizes = "m",
-                            default_size = "m") {
+observe_helpers <- function(input, output,
+                            help_dir = "helpfiles", 
+                            sizes = NULL,
+                            default_size = NULL) {
+  
+  if (!is.null(sizes)) 
+    message("'sizes' has been deprecated, please set sizes in calls to 'helper'")
+  
+  if (!is.null(default_size))
+    message("'default_size' has been deprecated, please set sizes in calls to 'helper'")
   
   shiny::observe({
     
-    input_questions  <- names(input)[grepl("-shinyhelper-msg$", names(input))]
-    output_questions <- names(output)[grepl("-shinyhelper-msg$", names(output))]
+    input_questions  <- names(input)[grepl("---shinyhelper$", names(input))]
+    output_questions <- names(output)[grepl("---shinyhelper$", names(output))]
     questions <- c(input_questions, output_questions)
     
-    lapply(questions, show_help_message, help_dir = help_dir, sizes = sizes,
-           default_size = default_size)
+    lapply(questions, show_help_message, help_dir = help_dir)
     
   })
   

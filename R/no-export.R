@@ -21,39 +21,22 @@ get_id <- function(shiny.tag){
 #' 
 #' @param id The id of the shiny.tag this help applies to
 #' @param help_dir The directory in which to look for help files
-#' @param sizes An optional named list of sizes for the different input and output ids
-#' @param default_size An optional default size, if other than 'm'
 #' 
-show_help_message <- function(id, help_dir = "helpfiles", sizes = "m", 
-                              default_size = "m"){
+show_help_message <- function(id, help_dir = "helpfiles"){
   
-  if (!(default_size %in% c("s", "m", "l"))) {
-    default_size <- "m"
-    warning("Invalid default_size - defaulting to 'm'")
-  }
+  components <- unlist(strsplit(id, split = "---"))
+  filename <- components[2]
+  size <- components[3]
   
-  id_name <- gsub("-shinyhelper-msg$", "", id)
-  
-  if (is.list(sizes)) {
-    if (id_name %in% names(sizes)) {
-      size <- sizes[[id_name]]
-      if (!(size %in% c("s", "m", "l"))) {
-        warning(paste0("Sizes must be one of 's', 'm', 'l'; defaulting to '", 
-                       default_size, "'."))
-        size <- default_size
-      }
-    } else {
-      size <- default_size
-    }
-  }
-  
-  file <- paste0(help_dir, "/", id_name, ".md")
+  file <- paste0(help_dir, "/", filename, ".md")
   
   if (file.exists(file)) {
     content <- shiny::includeMarkdown(file)
     title <- NULL
   } else {
-    content <- "We're sorry, there doesn't seem to be a helpfile for this yet!"
+    content <- shiny::tags$p("We're sorry, there doesn't seem to be a helpfile 
+                             for this yet! Looking for a helpfile called:",
+                             shiny::tags$strong(file))
     title <- shiny::tags$strong("Helpfile Not Found")
   }
   
