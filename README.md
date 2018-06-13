@@ -40,7 +40,7 @@ For example, if you have a `sliderInput()` with `inputId = "nclusters"`, its hel
 
 ## Installation
 
-**shinyhelper 0.1.1 now on CRAN!** Go to: [https://cran.r-project.org/package=shinyhelper](https://cran.r-project.org/package=shinyhelper) 
+**shinyhelper 0.2.0 now on CRAN!** Go to: [https://cran.r-project.org/package=shinyhelper](https://cran.r-project.org/package=shinyhelper) 
 You can install the package with:
 ```
 install.packages("shinyhelper")
@@ -55,15 +55,12 @@ In both cases, then load the package in with:
 ```
 library(shinyhelper)
 ```
+
+Note: the errors showing on CRAN for Windows binaries for R 3.4 and 3.5 may be safely ignored - they are to do with the CRAN build environment rather than the package itself.
+
 ## Demo
 
 To run a demo of the functionality this brings, install the package and then use:
-```
-shiny::runGitHub("cwthom/shinyhelper", subdir = "inst/example")
-```
-
-Alternatively, you can install the development version with `devtools::install_github`, and run:
-
 ```
 library(shinyhelper)
 
