@@ -1,10 +1,10 @@
-.shiny-helper-container {
+.shinyhelper-wrapper {
   
   position: relative;
   
 }
 
-.shiny-helper-question {
+.shinyhelper-container {
   
   position: absolute;
   top: 0;
