@@ -55,14 +55,14 @@ observe_helpers <- function(input, help_dir = "helpfiles") {
         
       }
       
-      modal <- modalDialog(
+      modal <- shiny::modalDialog(
         content,
         title = title,
         size = size,
         easyClose = TRUE
       )
       
-      showModal(modal)
+      shiny::showModal(modal)
         
     }
   )

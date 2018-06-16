@@ -29,7 +29,6 @@ together with line breaks.}
 }
 \description{
 Add an action button to your shiny UI with a question mark help icon (by default).
-In combination with \code{\link{use_shinyhelper}} and \code{\link{observe_helpers}}
-this action button will produce a \code{shiny::modalDialog} containing a markdown
-help file (of name \code{filename}).
+In combination with \code{\link{observe_helpers}} this action button will produce
+a \code{shiny::modalDialog} containing a markdown help file (of name \code{filename}).
 }
