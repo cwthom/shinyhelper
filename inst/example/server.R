@@ -7,8 +7,7 @@
 server <- function(input, output, session) {
   
   # use helpfiles
-  observe_helpers(input = input, output = output,
-                  help_dir = "helpfiles")
+  observe_helpers(input = input, help_dir = "helpfiles")
   
   # demo app for kmeans clustering taken from 
   # https://shiny.rstudio.com/gallery/kmeans-example.html
