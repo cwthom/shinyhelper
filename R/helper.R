@@ -23,7 +23,7 @@ helper <- function(shiny_tag,
                    colour = NULL,
                    type = "markdown",
                    title = NULL,
-                   content = NULL,
+                   content = "",
                    size = "m",
                    ...){
   
@@ -51,6 +51,7 @@ helper <- function(shiny_tag,
     content <- paste(content, sep = "", collapse = "\n")
   }
   
+  # if colour supplied, add it as style
   if (!is.null(colour)) colour <- paste0("color: ", colour, ";")
   
   help_icon <- shiny::icon(name = icon, class = "shinyhelper-icon")

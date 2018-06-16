@@ -42,8 +42,7 @@ observe_helpers <- function(input, help_dir = "helpfiles") {
         } else {
           
           content <- shiny::tags$p("We're sorry, there doesn't seem to be a helpfile 
-                             for this yet! Looking for a helpfile called:",
-                                   shiny::tags$strong(file))
+                             for this yet!")
           title <- shiny::tags$strong("Helpfile Not Found")
           
         }

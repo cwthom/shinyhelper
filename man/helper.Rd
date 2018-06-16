@@ -5,7 +5,7 @@
 \title{Augment a shiny.tag with a question mark helper button}
 \usage{
 helper(shiny_tag, icon = "question-circle", colour = NULL,
-  type = "markdown", title = NULL, content = NULL, size = "m", ...)
+  type = "markdown", title = NULL, content = "", size = "m", ...)
 }
 \arguments{
 \item{shiny_tag}{A shiny input or output object}
