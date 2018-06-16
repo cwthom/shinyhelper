@@ -68,12 +68,10 @@ helper <- function(shiny_tag,
   
   shiny::tagList(
     shiny::singleton(
-      shiny::tags$head(shiny::tags$link(rel="stylesheet",
-                                        href = "css-helper/shinyhelper.css"))
-    ),
-    shiny::singleton(
-      shiny::includeScript(system.file("js-helper", "shinyhelper.js",
-                                       package = "shinyhelper"))
+      shiny::tags$head(
+        shiny::tags$link(rel = "stylesheet",
+                         href = "shinyhelper/shinyhelper.css"),
+        shiny::tags$script(src = "shinyhelper/shinyhelper.js"))
     ),
     shiny::div(shiny_tag, help_icon, class = "shinyhelper-wrapper")
   )

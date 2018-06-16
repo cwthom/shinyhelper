@@ -1,5 +1,5 @@
 .onLoad <- function(libname, pkgname) {
-  shiny::addResourcePath(prefix = "css-helper",
-                         directoryPath = system.file("css-helper",
-                                                     package="shinyhelper"))
+  shiny::addResourcePath(prefix = "shinyhelper",
+                         directoryPath = system.file("assets",
+                                                     package = "shinyhelper"))
 }
