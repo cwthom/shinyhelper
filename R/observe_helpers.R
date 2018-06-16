@@ -21,11 +21,11 @@ observe_helpers <- function(input, help_dir = "helpfiles") {
   
   shiny::observeEvent(
     
-    eventExpr = input$shinyhelper_params,
+    eventExpr = input$`shinyhelper-modal_params`,
     
     handlerExpr = {
       
-      params <- input$shinyhelper_params
+      params <- input$`shinyhelper-modal_params`
       
       type <- params$type
       size <- params$size

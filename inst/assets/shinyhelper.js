@@ -17,7 +17,7 @@ $(document).ready(function() {
       nonce : nonce
     };
     
-    Shiny.onInputChange("shinyhelper_params", modal_params);
+    Shiny.onInputChange("shinyhelper-modal_params", modal_params);
     
   });
   
