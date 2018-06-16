@@ -9,6 +9,7 @@ New features:
 * can now specify inline content, with `type = "inline"`
 * no longer need to do `use_shinyhelper()` in UI
 * removed dependency on `shinyjs` - this is now purely an extension of shiny
+* modals now close by clicking anywhere, or pressing ESC
 
 
 # shinyhelper 0.2.0
