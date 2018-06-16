@@ -4,29 +4,21 @@
 \alias{observe_helpers}
 \title{Observe Helper Action Buttons}
 \usage{
-observe_helpers(input, output, help_dir = "helpfiles", sizes = NULL,
-  default_size = NULL)
+observe_helpers(input, help_dir = "helpfiles")
 }
 \arguments{
 \item{input}{The input object in your shiny app}
 
-\item{output}{The output object in your shiny app}
-
 \item{help_dir}{A character string of the directory containing your helpfiles}
-
-\item{sizes}{Deprecated - set sizes in \code{\link{helper}} instead}
-
-\item{default_size}{Deprecated - set sizes in \code{\link{helper}} instead}
 }
 \description{
-Function to create a family of \code{shinyjs::onclick} event handlers, observing 
-clicks on the \code{\link{helper}} action buttons.
+Function to show a modal dialog, observing each of the help icons in the app.
 }
 \examples{
 server <- function(input, output, session){
 
   # use anywhere in your server.R script
-  observe_helpers(input, output)
+  observe_helpers(input)
   
   # rest of server.R
   # ...

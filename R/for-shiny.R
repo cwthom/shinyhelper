@@ -1,46 +1,71 @@
 #' Observe Helper Action Buttons
 #' 
-#' Function to create a family of \code{shinyjs::onclick} event handlers, observing 
-#' clicks on the \code{\link{helper}} action buttons.
+#' Function to show a modal dialog, observing each of the help icons in the app.
 #' 
 #' @export
 #' @param input The input object in your shiny app
-#' @param output The output object in your shiny app
 #' @param help_dir A character string of the directory containing your helpfiles
-#' @param sizes Deprecated - set sizes in \code{\link{helper}} instead
-#' @param default_size Deprecated - set sizes in \code{\link{helper}} instead
 #' 
 #' @examples
 #' server <- function(input, output, session){
 #' 
 #'   # use anywhere in your server.R script
-#'   observe_helpers(input, output)
+#'   observe_helpers(input)
 #'   
 #'   # rest of server.R
 #'   # ...
 #'   # ...
 #' }
 #' 
-observe_helpers <- function(input, output,
-                            help_dir = "helpfiles", 
-                            sizes = NULL,
-                            default_size = NULL) {
+observe_helpers <- function(input, help_dir = "helpfiles") {
   
-  if (!is.null(sizes)) 
-    message("'sizes' has been deprecated, please set sizes in calls to 'helper'")
-  
-  if (!is.null(default_size))
-    message("'default_size' has been deprecated, please set sizes in calls to 'helper'")
-  
-  shiny::observe({
+  shiny::observeEvent(
     
-    input_questions  <- names(input)[grepl("---shinyhelper$", names(input))]
-    output_questions <- names(output)[grepl("---shinyhelper$", names(output))]
-    questions <- c(input_questions, output_questions)
+    eventExpr = input$shinyhelper_params,
     
-    lapply(questions, show_help_message, help_dir = help_dir)
-    
-  })
+    handlerExpr = {
+      
+      params <- input$shinyhelper_params
+      
+      type <- params$type
+      size <- params$size
+      
+      if (type == "markdown") {
+        
+        file <- paste0(help_dir, "/", params$content, ".md")
+        
+        if (file.exists(file)) {
+          
+          content <- shiny::includeMarkdown(file)
+          title <- NULL
+          
+        } else {
+          
+          content <- shiny::tags$p("We're sorry, there doesn't seem to be a helpfile 
+                             for this yet! Looking for a helpfile called:",
+                                   shiny::tags$strong(file))
+          title <- shiny::tags$strong("Helpfile Not Found")
+          
+        }
+        
+      } else {
+        
+        content <- params$content
+        title <- params$title
+        
+      }
+      
+      modal <- modalDialog(
+        content,
+        title = title,
+        size = size,
+        easyClose = TRUE
+      )
+      
+      showModal(modal)
+        
+    }
+  )
   
 }
 
