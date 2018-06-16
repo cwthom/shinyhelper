@@ -123,6 +123,14 @@ create_help_files(ids = c("Clusters", "Columns", "PlotHelp"),
 
 ***
 
+## Development Version 0.2.0.9000
+
+The development version can be installed with the `devtools` package. It removes the dependency on `shinyjs` and gives greater control to the user on how to specify help content, including support for inline text defined in the UI.
+
+This will become shinyhelper 0.3.0 - hopefully in the near future!
+
+***
+
 ## Credits
 
 Obviously, this package would not be possible (or indeed meaningful) without the incredible [shiny](https://github.com/rstudio/shiny) and [shinyjs](https://github.com/daattali/shinyjs) packages. Full credit to them for all the actual work!
