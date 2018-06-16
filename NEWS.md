@@ -1,3 +1,16 @@
+### shinyhelper 0.2.0.9000
+
+This will become v0.3.0 - it is a complete re-write internally, changing how the information to be displayed in the help box is conveyed from the browser to the server, and giving the user the option of specifying inline content.
+
+The ui is also no longer cluttered with additional inputs.
+
+New features:
+
+* can now specify inline content, with `type = "inline"`
+* no longer need to do `use_shinyhelper()` in UI
+* removed dependency on `shinyjs` - this is now purely an extension of shiny
+
+
 # shinyhelper 0.2.0
 
 Welcome to shinyhelper v0.2.0 - this is an improved version on the original package, with greater freedom and ease for you to customise your app UI. 
