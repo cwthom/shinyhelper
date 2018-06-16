@@ -68,26 +68,3 @@ observe_helpers <- function(input, help_dir = "helpfiles") {
   )
   
 }
-
-#' Use shinyhelper
-#' 
-#' Function to go in ui.R to use the package - wrapper round \code{shinyjs::useShinyjs()}
-#' 
-#' @export
-#' 
-#' @param ... options to pass to \code{shinyjs::useShinyjs}
-#' 
-#' @examples
-#' ui <- shiny::fluidPage(
-#' 
-#'   # use at top level in your ui script
-#'   use_shinyhelper()
-#'   
-#'   # rest of ui.R
-#'   # ...
-#'   # ...
-#' )
-#' 
-use_shinyhelper <- function(...){
-  shinyjs::useShinyjs(...)
-}

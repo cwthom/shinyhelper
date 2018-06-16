@@ -7,5 +7,5 @@ BugReports: https://github.com/cwthom/shinyhelper/issues
 Description: Creates a lightweight way to add markdown helpfiles to 'shiny' apps,
     using modal dialog boxes, with no need to observe each help button separately.
 License: GPL-3
-Imports: shiny, shinyjs
+Imports: shiny
 RoxygenNote: 6.0.1
