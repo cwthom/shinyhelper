@@ -33,10 +33,13 @@ helper <- function(shiny_tag,
     stop("type must be 'inline' or 'markdown'")
   }
   
-  # ignore title if markdown
-  if (type == "markdown" && !is.null(title)) {
-    warning("ignoring 'title' when type = 'markdown' - supply a heading in your file")
-    title <- "ignored"
+  # if title is missing when it shouldn't be, use Title
+  if (is.null(title)) {
+    if (type == "markdown") {
+      title <- "ignore"
+    } else {
+      title <- "Title"
+    }
   }
 
   # validate size
@@ -58,9 +61,9 @@ helper <- function(shiny_tag,
                                           modal_title = title,
                                           modal_content = content)
   
-  help_icon <- shiny::div(class = "shinyhelper-container",
-                          style = colour, 
-                          help_icon,
+  help_icon <- shiny::div(help_icon,
+                          class = "shinyhelper-container",
+                          style = colour,
                           ...)
   
   shiny::tagList(
@@ -72,6 +75,6 @@ helper <- function(shiny_tag,
       shiny::includeScript(system.file("js-helper", "shinyhelper.js",
                                        package = "shinyhelper"))
     ),
-    shiny::div(class = "shinyhelper-wrapper", shiny_tag, help_icon)
+    shiny::div(shiny_tag, help_icon, class = "shinyhelper-wrapper")
   )
 }
