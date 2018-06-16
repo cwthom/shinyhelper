@@ -7,11 +7,11 @@
 #' @examples 
 #' \dontrun{
 #' if (interactive()) {
-#'   shinyhelperDemo()
+#'   shinyhelper_demo()
 #' }
 #' }
 #' 
-shinyhelperDemo <- function() {
+shinyhelper_demo <- function() {
   
   if (!requireNamespace(package = "shinyhelper")) {
     message("Package 'shinyhelper' is required to run this function")

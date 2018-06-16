@@ -4,34 +4,31 @@
 \alias{helper}
 \title{Augment a shiny.tag with a question mark helper button}
 \usage{
-helper(shiny.tag, filename = NULL, size = "m",
-  icon = shiny::icon("question-circle-o"), class = "shiny-helper-question",
-  icon_colour = NULL, ...)
+helper(shiny_tag, icon = "question-circle", colour = NULL,
+  type = "markdown", title = NULL, content = "", size = "m", ...)
 }
 \arguments{
-\item{shiny.tag}{A shiny input or output object}
+\item{shiny_tag}{A shiny input or output object}
 
-\item{filename}{A character string of the name of the helpfile you want to display}
+\item{icon}{A character string of the name of the fa-icon to display}
+
+\item{colour}{Any valid CSS colour for the icon}
+
+\item{type}{Either 'markdown' to include a helpfile, or 'inline' to specify text}
+
+\item{title}{If \code{type = "inline"}, the title of the \code{modalDialog} - otherwise
+this will be ignored, and you should use a heading in your markdown file.}
+
+\item{content}{If \code{type = "markdown"}, the name of your markdown file; if
+\code{type = "inline"}, a character vector of text to include. This will be pasted 
+together with line breaks.}
 
 \item{size}{Either 's', 'm' or 'l' - the size of the modal dialog to display}
 
-\item{icon}{An icon created with \code{shiny::icon()}}
-
-\item{class}{A custom CSS class - defaults to shiny-helper-question}
-
-\item{icon_colour}{Any valid CSS colour for the icon (if you pass a colour 
-as a \code{style} argument, \code{icon_colour} will be overruled)}
-
-\item{...}{Other arguments to pass to shiny::actionButton}
+\item{...}{Other arguments to pass to the \code{div} containing the icon}
 }
 \description{
 Add an action button to your shiny UI with a question mark help icon (by default).
-In combination with \code{\link{use_shinyhelper}} and \code{\link{observe_helpers}}
-this action button will produce a \code{shiny::modalDialog} containing a markdown
-help file (of name \code{filename}).
-}
-\examples{
-helper(shiny::actionButton(inputId = "button1", label = "Click me!"))
-helper(shiny::plotOutput(outputId = "plot1"), size = "l", filename = "PlotHelp", 
-       icon_colour = "green")
+In combination with \code{\link{observe_helpers}} this action button will produce
+a \code{shiny::modalDialog} containing a markdown help file (of name \code{filename}).
 }

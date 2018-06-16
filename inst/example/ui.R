@@ -12,9 +12,6 @@ library(shinyhelper)
 
 ui <- fluidPage(
   
-  # need to use Shinyjs
-  use_shinyhelper(),
-  
   # title of demo app
   titlePanel(title = "ShinyHelper Demo"),
   
@@ -26,26 +23,32 @@ ui <- fluidPage(
       
       selectInput(inputId = "xcol", label = "X Variable",
                   choices = names(iris)) %>% 
-        helper(icon = icon("question"), icon_colour = "green",
-               filename = "Columns"),
+        helper(icon = "question",
+               colour = "green",
+               type = "markdown",
+               content = "Columns"),
       
       selectInput(inputId = "ycol", "Y Variable",
                   choices = names(iris),
                   selected = names(iris)[[2]]) %>% 
-        helper(size = "s", filename = "Columns"),
+        helper(type = "inline",
+               title = "Inline Help",
+               content = "This helpfile is defined entirely in the UI!",
+               size = "s"),
       
       sliderInput(inputId = "clusters", "Cluster count",
                   value = 3, min = 1, max = 9) %>% 
-        helper(icon = icon("exclamation"), icon_colour = "red",
-               filename = "Clusters")
-      
+        helper(icon = "exclamation",
+               colour = "red",
+               content = "Clusters")
     ),
     
     # mainpanel with output plot
     mainPanel = mainPanel(
       
       plotOutput(outputId = "kmeans") %>% 
-        helper(filename = "PlotHelp", size = "l")
+        helper(size = "l", 
+               content = "PlotHelp")
       
     )
   )
