@@ -59,7 +59,8 @@ observe_helpers <- function(session = shiny::getDefaultReactiveDomain(),
         content,
         title = title,
         size = size,
-        easyClose = TRUE
+        easyClose = TRUE,
+        footer = shiny::modalButton("Okay")
       )
       
       shiny::showModal(modal)
