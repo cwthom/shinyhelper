@@ -10,6 +10,7 @@ New features:
 * no longer need to do `use_shinyhelper()` in UI
 * removed dependency on `shinyjs` - this is now purely an extension of shiny
 * modals now close by clicking anywhere, or pressing ESC
+* no longer need to pass `input` to `observe_helpers`
 
 
 # shinyhelper 0.2.0

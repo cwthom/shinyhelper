@@ -6,8 +6,8 @@
 
 server <- function(input, output, session) {
   
-  # use helpfiles
-  observe_helpers(input = input, help_dir = "helpfiles")
+  # uses 'helpfiles' directory by default
+  observe_helpers()
   
   # demo app for kmeans clustering taken from 
   # https://shiny.rstudio.com/gallery/kmeans-example.html

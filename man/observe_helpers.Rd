@@ -4,10 +4,11 @@
 \alias{observe_helpers}
 \title{Observe Helper Action Buttons}
 \usage{
-observe_helpers(input, help_dir = "helpfiles")
+observe_helpers(session = shiny::getDefaultReactiveDomain(),
+  help_dir = "helpfiles")
 }
 \arguments{
-\item{input}{The input object in your shiny app}
+\item{session}{The session object in your shiny app}
 
 \item{help_dir}{A character string of the directory containing your helpfiles}
 }
@@ -18,7 +19,7 @@ Function to show a modal dialog, observing each of the help icons in the app.
 server <- function(input, output, session){
 
   # use anywhere in your server.R script
-  observe_helpers(input)
+  observe_helpers()
   
   # rest of server.R
   # ...

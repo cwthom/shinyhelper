@@ -49,7 +49,7 @@ helper(plotOutput(outputId = "plot"))
 
 ...
 # In your server script, include:
-observe_helpers(input, help_dir = "helpfiles")
+observe_helpers()
 
 # this triggers the modal dialogs when the user clicks an icon
 # specify the name of your directory of help markdown files here
