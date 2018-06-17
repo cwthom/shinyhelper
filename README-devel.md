@@ -34,6 +34,16 @@ In both cases, then load the package in with:
 library(shinyhelper)
 ```
 
+## Demo
+
+To run a demo of the functionality this package brings, install the package and then use:
+
+```
+library(shinyhelper)
+
+shinyhelper_demo()
+```
+
 ## Usage
 
 You can add help files to any shiny element, including all inputs and outputs, with a simple call to `helper()`:
@@ -78,16 +88,6 @@ plotOutput(outputId = "plot") %>% helper(type = "markdown",
                                          content = "Plot")
 
 # this will search for 'Plot.md' in the directory given in observe_helpers
-```
-
-## Demo
-
-To run a demo of the functionality this brings, install the package and then use:
-
-```
-library(shinyhelper)
-
-shinyhelper_demo()
 ```
 
 ## Changing the Icon Appearance
