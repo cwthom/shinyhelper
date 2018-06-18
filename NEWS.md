@@ -12,6 +12,7 @@ New features:
 * modals now close by clicking anywhere, or pressing ESC
 * no longer need to pass `input` to `observe_helpers`
 * uses data-* attributes from HTML5 to store information, not non-standard attributes
+* published demo to shinyapps.io
 
 
 # shinyhelper 0.2.0

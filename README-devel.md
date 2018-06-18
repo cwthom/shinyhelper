@@ -36,13 +36,16 @@ library(shinyhelper)
 
 ## Demo
 
-To run a demo of the functionality this package brings, install the package and then use:
+There is a live demo hosted on shinyapps.io. [Click here to go to the demo!](https://cwthom94.shinyapps.io/shinyhelper-demo/)
+
+Alternatively, run the demo locally with:
 
 ```
 library(shinyhelper)
 
 shinyhelper_demo()
 ```
+
 
 ## Usage
 

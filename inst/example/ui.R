@@ -13,7 +13,7 @@ library(shinyhelper)
 ui <- fluidPage(
   
   # title of demo app
-  titlePanel(title = "ShinyHelper Demo"),
+  titlePanel(title = "Demo - shinyhelper"),
   
   # use a sidebar layout
   sidebarLayout(
