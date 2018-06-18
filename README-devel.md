@@ -90,6 +90,8 @@ plotOutput(outputId = "plot") %>% helper(type = "markdown",
 # this will search for 'Plot.md' in the directory given in observe_helpers
 ```
 
+You can specify a `title` argument too, or leave it blank and use a `## Heading` in your markdown document.
+
 ## Changing the Icon Appearance
 
 You can change the type of icon used and its colour, as well as passing CSS inline.

@@ -22,39 +22,31 @@ helper <- function(shiny_tag,
                    icon = "question-circle",
                    colour = NULL,
                    type = "markdown",
-                   title = NULL,
+                   title = "",
                    content = "",
                    size = "m",
                    ...){
   
-  # validate type
   if (!(type %in% c("inline", "markdown"))) {
     stop("type must be 'inline' or 'markdown'")
   }
-  
-  # if title is missing when it shouldn't be, use Title
-  if (is.null(title)) {
-    if (type == "markdown") {
-      title <- "ignore"
-    } else {
-      title <- "Title"
-    }
-  }
 
-  # validate size
   if (!(size %in% c("s", "m", "l"))) {
     stop("size must be in c('s', 'm', 'l')")
   }
   
-  # if inline, paste content together with line breaks
   if (type == "inline") {
     content <- paste(content, sep = "", collapse = "\n")
+  } else {
+    content <- paste(content, ".md", sep = "")
   }
   
-  # if colour supplied, add it as style
-  if (!is.null(colour)) colour <- paste0("color: ", colour, ";")
+  if (!is.null(colour)) {
+    colour <- paste0("color: ", colour, ";")
+  }
   
   help_icon <- shiny::icon(name = icon, class = "shinyhelper-icon")
+  
   help_icon <- shiny::tagAppendAttributes(tag = help_icon,
                                           "data-modal-size" = size,
                                           "data-modal-type" = type,
