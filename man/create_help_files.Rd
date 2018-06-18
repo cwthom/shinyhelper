@@ -4,10 +4,10 @@
 \alias{create_help_files}
 \title{Create Directory of Help Files}
 \usage{
-create_help_files(ids, help_dir)
+create_help_files(files, help_dir = "helpfiles")
 }
 \arguments{
-\item{ids}{A character vector of names to use in creating help files.}
+\item{files}{A character vector of names to use in creating help files.}
 
 \item{help_dir}{A character string of the directory to use for help files.}
 }
@@ -17,6 +17,7 @@ help files (.md files) in help_dir, using the vector of ids. Pass it a vector
 of ids corresponding to the inputId and outputId in your shiny app.
 }
 \examples{
-create_help_files(ids = c("xcol", "plot1"), help_dir = tempdir())
+create_help_files(files = c("Clusters", "Columns", "PlotHelp"), 
+                  help_dir = "helpfiles")
 
 }

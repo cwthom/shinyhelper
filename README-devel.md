@@ -132,13 +132,15 @@ plotOutput(outputId = "plot") %>% helper(size = "l")
 
 ## Creating your Help Files
 
-There is a helper function, `create_help_files()` to quickly create a directory of helpfiles from a vector of names. 
+There is also a function, `create_help_files()` to quickly create a directory of help files from a vector of names. 
 
 ```
 # Run this interactively, not in a shiny app
-create_help_files(ids = c("Clusters", "Columns", "PlotHelp"), 
+create_help_files(files = c("Clusters", "Columns", "PlotHelp"), 
                   help_dir = "helpfiles")
 ```
+
+The `help_dir` will be "helpfiles" by default.
 
 ## Credits
 
