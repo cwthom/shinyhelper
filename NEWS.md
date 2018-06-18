@@ -11,6 +11,7 @@ New features:
 * removed dependency on `shinyjs` - this is now purely an extension of shiny
 * modals now close by clicking anywhere, or pressing ESC
 * no longer need to pass `input` to `observe_helpers`
+* uses data-* attributes from HTML5 to store information, not non-standard attributes
 
 
 # shinyhelper 0.2.0

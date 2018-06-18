@@ -56,10 +56,10 @@ helper <- function(shiny_tag,
   
   help_icon <- shiny::icon(name = icon, class = "shinyhelper-icon")
   help_icon <- shiny::tagAppendAttributes(tag = help_icon,
-                                          modal_size = size,
-                                          modal_type = type,
-                                          modal_title = title,
-                                          modal_content = content)
+                                          "data-modal-size" = size,
+                                          "data-modal-type" = type,
+                                          "data-modal-title" = title,
+                                          "data-modal-content" = content)
   
   help_icon <- shiny::div(help_icon,
                           class = "shinyhelper-container",

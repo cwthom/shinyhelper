@@ -3,17 +3,14 @@ $(document).ready(function() {
   
   $(".shinyhelper-icon").on("click", function() {
     
-    var modal_size = this.getAttribute("modal_size");
-    var modal_type = this.getAttribute("modal_type");
-    var modal_title = this.getAttribute("modal_title");
-    var modal_content = this.getAttribute("modal_content");
+    var data = this.dataset;
     var nonce = Math.random();
     
     var modal_params = {
-      size : modal_size,
-      type : modal_type,
-      title : modal_title,
-      content : modal_content,
+      size : data.modalSize,
+      type : data.modalType,
+      title : data.modalTitle,
+      content : data.modalContent,
       nonce : nonce
     };
     
