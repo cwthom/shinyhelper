@@ -1,4 +1,4 @@
-// Script to update the shinyhelper_params input
+// Script to update the shinyhelper-modal_params input
 $(document).ready(function() {
   
   $(".shinyhelper-icon").on("click", function() {

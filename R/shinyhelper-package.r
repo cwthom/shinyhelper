@@ -1,13 +1,17 @@
 #' shinyhelper.
 #'
 #' Easily add markdown helpfiles to your shiny apps, by adding a single function
-#' around a shiny input or output. This adds a small 'question mark' help button,
-#' which presents a markdown file in a modalDialog when clicked.
+#' around a shiny app element. This adds a small icon (a question mark, by default)
+#' which presents content in a modal dialog box when clicked. The content can be passed 
+#' inline or given in a markdown file.
 #' 
-#' There is also a convenient helper function to initialise a directory of markdown
-#' files given a vector of input and output IDs.
+#' There is also a convenient function to initialise a directory of markdown files
+#' given a vector of filenames.
 #' 
-#' For further reference on how to use the package, please refer to https://github.com/cwthom/shinyhelper
+#' A demo is available at \url{https://cwthom94.shinyapps.io/shinyhelper-demo/}
+#' 
+#' For further reference on how to use the package, please refer to
+#' \url{https://github.com/cwthom/shinyhelper}
 #' 
 #' @name shinyhelper
 #' @docType package
