@@ -1,3 +1,28 @@
+# shinyhelper 0.3.0
+
+Welcome to shinyhelper 0.3.0 - this version of the package is a complete re-write of the previous version and is NOT BACKWARDS COMPATIBLE. This change has been to make the package less of a hack and more of a proper extension of `shiny`. It also brings in a smoother interface for app developers, with fewer function calls necessary for the package to work, and less intrusion into the workings of your apps.
+
+**New features:**
+
+* No longer dependent on package `shinyjs`
+* No need for the `use_shinyhelper()` function - this has been removed
+* Can now pass inline content as well as markdown files to your shiny app. This means that short help dialog boxes can be defined entirely within the UI of your app, where they should be. Just use the `type` argument to `helper()` with `type = "inline"`
+* The modals created by `helper()` now have `easyClose = TRUE`, so can be shut by clicking anywhere or pressing ESC
+* `observe_helpers()` now has no mandatory arguments; it can be called as-is
+* Information such as the size and content of help pages is now stored in data-* attributes of the HTML tags created by `helper()` - previously it was bodged together in the ID.
+* `create_help_files()` will create a directory called "helpfiles" by default.
+
+**Non-backwards compatible changes:**
+
+* Various arguments to `helper()` have been renamed or replaced.
+* `observe_helpers()` now looks at the session object rather than `input` and `output` directly.
+* `shinyhelperDemo()` has been renamed `shinyhelper_demo()` to match other `snake_case` naming convention throughout the package.
+
+**Thanks:**
+
+Thanks go to Dean Attali for his feedback on v0.2.0
+
+
 ### shinyhelper 0.2.0.9000
 
 This will become v0.3.0 - it is a complete re-write internally, changing how the information to be displayed in the help box is conveyed from the browser to the server, and giving the user the option of specifying inline content.

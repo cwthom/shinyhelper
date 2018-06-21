@@ -1,8 +1,9 @@
 #' Create Directory of Help Files
 #' 
 #' Helper function to be run interactively - it will initialise a directory of
-#' help files (.md files) in help_dir, using the vector of ids. Pass it a vector
-#' of ids corresponding to the inputId and outputId in your shiny app.
+#' help files (.md files) in help_dir, using the vector of files. Pass it a vector
+#' of filenames which you which to use with \code{type = "markdown"} in your calls to
+#' \code{\link{helper}}.
 #' 
 #' @export
 #' 

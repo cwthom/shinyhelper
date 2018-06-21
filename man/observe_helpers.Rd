@@ -8,9 +8,9 @@ observe_helpers(session = shiny::getDefaultReactiveDomain(),
   help_dir = "helpfiles")
 }
 \arguments{
-\item{session}{The session object in your shiny app}
+\item{session}{The session object in your shiny app.}
 
-\item{help_dir}{A character string of the directory containing your helpfiles}
+\item{help_dir}{A character string of the directory containing your helpfiles.}
 }
 \description{
 Function to show a modal dialog, observing each of the help icons in the app.

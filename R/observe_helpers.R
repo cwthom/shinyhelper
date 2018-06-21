@@ -3,8 +3,8 @@
 #' Function to show a modal dialog, observing each of the help icons in the app.
 #' 
 #' @export
-#' @param session The session object in your shiny app
-#' @param help_dir A character string of the directory containing your helpfiles
+#' @param session The session object in your shiny app.
+#' @param help_dir A character string of the directory containing your helpfiles.
 #' 
 #' @examples
 #' server <- function(input, output, session){

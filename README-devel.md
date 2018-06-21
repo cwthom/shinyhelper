@@ -18,7 +18,7 @@ The advantages of using this package are:
 
 ## Installation
 
-**shinyhelper 0.2.0 now on CRAN!** Go to: [https://cran.r-project.org/package=shinyhelper](https://cran.r-project.org/package=shinyhelper) 
+**shinyhelper 0.3.0 now on CRAN!** Go to: [https://cran.r-project.org/package=shinyhelper](https://cran.r-project.org/package=shinyhelper) 
 You can install the package with:
 ```
 install.packages("shinyhelper")
@@ -67,6 +67,8 @@ observe_helpers()
 # this triggers the modal dialogs when the user clicks an icon
 # specify the name of your directory of help markdown files here
 
+# e.g. observe_helpers(help_dir = "help_mds") will look for a directory called help_mds
+
 ```
 ## Content
 
@@ -106,6 +108,8 @@ The icons are `shiny::icon("question-circle")` icons by default, but you can cha
 ```
 plotOutput(outputId = "plot") %>% helper(icon = "exclamation")
 ```
+
+Please see [Font Awesome](https://fontawesome.com/icons?d=gallery) for the available icons.
 
 ### Colour
 
