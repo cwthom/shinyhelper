@@ -1,3 +1,16 @@
+# shinyhelper 0.3.0
+
+## Test Environments
+* local Windows 10, R 3.5.0
+* Ubuntu Trusty 14.04 (travis-ci): oldrel, release, devel
+* win-builder: release, devel
+
+## R CMD Check Results
+There were no ERRORs, WARNINGs or NOTEs.
+
+## Reverse Dependencies
+There are no reverse dependencies at this time.
+
 # shinyhelper 0.2.0
 
 ## Test Environments
