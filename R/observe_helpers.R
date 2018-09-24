@@ -44,7 +44,7 @@ observe_helpers <- function(session = shiny::getDefaultReactiveDomain(),
         if (file.exists(file)) {
           content <- shiny::includeMarkdown(file)
           if (withMathJax) {
-            content <- withMathJax(content)
+            content <- shiny::withMathJax(content)
           }
         } else {
           title <- shiny::tags$strong("Helpfile Not Found")
