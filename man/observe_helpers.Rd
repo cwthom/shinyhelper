@@ -5,12 +5,15 @@
 \title{Observe Helper Action Buttons}
 \usage{
 observe_helpers(session = shiny::getDefaultReactiveDomain(),
-  help_dir = "helpfiles")
+  help_dir = "helpfiles", withMathJax = FALSE)
 }
 \arguments{
 \item{session}{The session object in your shiny app.}
 
 \item{help_dir}{A character string of the directory containing your helpfiles.}
+
+\item{withMathJax}{If \code{TRUE} the MathJax library is added to allow for 
+math expressions in markdown content.}
 }
 \description{
 Function to show a modal dialog, observing each of the help icons in the app.
