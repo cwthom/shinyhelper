@@ -5,3 +5,6 @@ These selection boxes let you set the variables of the `iris` dataset used in th
 
 ***
 This helpfile has a different icon - this is set using the `icon` parameter to the `helper()` function.
+You can also include mathematical formulae using the `withMathJax` argument to `observe_helpers()`
+This allows for elements in your help such as:
+$$\\alpha+\\beta$$

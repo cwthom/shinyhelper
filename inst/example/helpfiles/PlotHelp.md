@@ -7,7 +7,12 @@ This plot shows the output of performing the kmeans clustering algorithm on the 
 This helpfile has rather more in it that the others, so it requires a larger dialog box to display. You can set the size of dialog boxes by passing the `size` argument to `helper()`.
 
 ***
-For more information on kmeans clustering, see [the wikipedia page](https://en.wikipedia.org/wiki/K-means_clustering).
+Note we can have any feature of markdown, such as:
+* Lists!
+* [Links to websites (rstudio)](https://rstudio.com/)
+* Text in **bold** and *italics*.
 
 ***
-If you have image files in your help directory, you can include them in your markdown!
+If you have image files in your help directory, you can include them in your markdown as well:
+![An image (PNG)](plot.png)
+

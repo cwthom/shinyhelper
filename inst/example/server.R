@@ -7,7 +7,8 @@
 server <- function(input, output, session) {
   
   # uses 'helpfiles' directory by default
-  observe_helpers()
+  # in this example, we use the withMathJax parameter to render formulae
+  observe_helpers(withMathJax = TRUE)
   
   # demo app for kmeans clustering taken from 
   # https://shiny.rstudio.com/gallery/kmeans-example.html
