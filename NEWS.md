@@ -1,3 +1,9 @@
+### shinyhelper 0.3.0.9000
+
+New features:
+
+* fix to `z-index` CSS parameter of help icons
+
 # shinyhelper 0.3.0
 
 Welcome to shinyhelper 0.3.0 - this version of the package is a complete re-write of the previous version and is NOT BACKWARDS COMPATIBLE. This change has been to make the package less of a hack and more of a proper extension of `shiny`. It also brings in a smoother interface for app developers, with fewer function calls necessary for the package to work, and less intrusion into the workings of your apps.

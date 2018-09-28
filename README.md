@@ -1,4 +1,4 @@
-# shinyhelper <img src="man/figures/logo.png" align="right"/>
+# shinyhelper - development version <img src="man/figures/logo.png" align="right"/>
 
 
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/shinyhelper)](https://cran.r-project.org/package=shinyhelper)
