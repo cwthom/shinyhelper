@@ -2,7 +2,10 @@
 
 New features:
 
+Thanks to GitHub user kornl for both of the following:
 * fix to `z-index` CSS parameter of help icons
+* add withMathJax parameter to allow formulae to render
+
 
 # shinyhelper 0.3.0
 

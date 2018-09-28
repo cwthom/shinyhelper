@@ -69,6 +69,9 @@ observe_helpers()
 
 # e.g. observe_helpers(help_dir = "help_mds") will look for a directory called help_mds
 
+# If you wish to include mathematical formulae in your markdown, use the `withMathJax` argument:
+# observe_helpers(withMathJax = TRUE)
+
 ```
 ## Content
 
