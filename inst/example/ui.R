@@ -33,7 +33,9 @@ ui <- fluidPage(
                   selected = names(iris)[[2]]) %>% 
         helper(type = "inline",
                title = "Inline Help",
-               content = "This helpfile is defined entirely in the UI!",
+               content = c("This helpfile is defined entirely in the UI!",
+                           "This is on a new line.",
+                           "This is some <b>HTML</b>."),
                size = "s"),
       
       sliderInput(inputId = "clusters", "Cluster count",

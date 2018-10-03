@@ -52,7 +52,7 @@ observe_helpers <- function(session = shiny::getDefaultReactiveDomain(),
         }
         
       } else {
-        content <- params$content
+        content <- shiny::HTML(params$content)
       }
       
       modal <- shiny::modalDialog(
