@@ -44,7 +44,7 @@ helper <- function(shiny_tag,
   }
   
   if (type == "inline") {
-    content <- paste(content, sep = "", collapse = "\n")
+    content <- paste(content, sep = "", collapse = "<br>")
   } else {
     content <- paste(content, ".md", sep = "")
   }
