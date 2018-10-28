@@ -32,4 +32,17 @@ server <- function(input, output, session) {
          pch = 20, cex = 3)
     points(clusters()$centers, pch = 4, cex = 4, lwd = 4)
   })
+  
+  # demostrate helpers on dynamic UI
+  output$dynamicUI <- renderUI({
+    h4("Click the help icon for current details") %>% 
+      helper(icon = "question", 
+             colour = "orange",
+             size = "s",
+             type = "inline",
+             title = "Current Details",
+             content = c(paste("<b>x-variable:</b>", input$xcol),
+                         paste("<b>y-variable:</b>", input$ycol),
+                         paste("<b>Clusters:</b>", input$clusters)))
+  })
 }
