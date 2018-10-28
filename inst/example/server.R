@@ -35,7 +35,7 @@ server <- function(input, output, session) {
   
   # demostrate helpers on dynamic UI
   output$dynamicUI <- renderUI({
-    h4("Click the help icon for current details") %>% 
+    h4("Click the help icon for current details...") %>% 
       helper(icon = "question", 
              colour = "orange",
              size = "s",
@@ -43,6 +43,7 @@ server <- function(input, output, session) {
              title = "Current Details",
              content = c(paste("<b>x-variable:</b>", input$xcol),
                          paste("<b>y-variable:</b>", input$ycol),
-                         paste("<b>Clusters:</b>", input$clusters)))
+                         paste("<b>Clusters:</b>", input$clusters),
+                         "</br>Note this help icon is rendered on the server!"))
   })
 }

@@ -1,4 +1,4 @@
-# shinyhelper - development version <img src="man/figures/logo.png" align="right"/>
+# shinyhelper <img src="man/figures/logo.png" align="right"/>
 
 
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/shinyhelper)](https://cran.r-project.org/package=shinyhelper)
@@ -18,7 +18,7 @@ The advantages of using this package are:
 
 ## Installation
 
-**shinyhelper 0.3.0 now on CRAN!** Go to: [https://cran.r-project.org/package=shinyhelper](https://cran.r-project.org/package=shinyhelper) 
+**shinyhelper 0.3.1 now on CRAN!** Go to: [https://cran.r-project.org/package=shinyhelper](https://cran.r-project.org/package=shinyhelper) 
 You can install the package with:
 ```
 install.packages("shinyhelper")
@@ -46,7 +46,6 @@ library(shinyhelper)
 shinyhelper_demo()
 ```
 
-
 ## Usage
 
 You can add help files to any shiny element, including all inputs and outputs, with a simple call to `helper()`:
@@ -69,19 +68,26 @@ observe_helpers()
 
 # e.g. observe_helpers(help_dir = "help_mds") will look for a directory called help_mds
 
+# If you wish to include mathematical formulae in your markdown, use the `withMathJax` argument:
+# observe_helpers(withMathJax = TRUE)
+
 ```
+
+Note that as of shinyhelper v0.3.1, you can define `helper`s in dynamic UI elements as well! This opens up the option to display different helpfiles depending on current input settings, improving user experience. Thanks to those who flagged this issue and waited patiently for a fix!
+
 ## Content
 
 All you need now is some content for your help page. You can specify this in 2 ways:
 
 ### inline
 
-To specify inline content, simply set `type = "inline"` in `helper`, and supply the `title` and `content` arguments. `content` can be a character vector, in which case each element will be a new line. E.g.
+To specify inline content, simply set `type = "inline"` in `helper`, and supply the `title` and `content` arguments. `content` can be a character vector, in which case each element will be a new line. You can also use raw HTML tags to format your inline content E.g.
 
 ```
 plotOutput(outputId = "plot") %>% helper(type = "inline",
                                          title = "Plot",
-                                         content = "This is a plot.")
+                                         content = c("This is a <b>plot</b>.",
+                                                     "This is on a new line."))
 ```
 
 ### markdown
