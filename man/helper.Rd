@@ -20,7 +20,7 @@ helper(shiny_tag, icon = "question-circle", colour = NULL,
 if your markdown document has a header you wish to use instead).}
 
 \item{content}{If \code{type = "markdown"}, the name of your markdown file; if
-\code{type = "inline"}, a character vector of text to include. This will be pasted 
+\code{type = "inline"}, a character vector of text/HTML to include. This will be pasted 
 together with line breaks. You need not add '.md' to the markdown filename.}
 
 \item{size}{Either 's', 'm' or 'l' - the size of the modal dialog to display.}
