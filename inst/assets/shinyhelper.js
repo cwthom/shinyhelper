@@ -1,5 +1,5 @@
-// Script to update the shinyhelper-modal_params input
-$(document).ready(function() {
+// function to update the shinyhelper-modal_params input
+function observe_helpers() {
   
   $(".shinyhelper-icon").on("click", function() {
     
@@ -18,4 +18,13 @@ $(document).ready(function() {
     
   });
   
+}
+
+// call the function on startup, to capture static helpers
+$(document).ready(function() { observe_helpers() });
+
+// call each time shiny values change, to capture dynamic observers
+$(document).on("shiny:value", function() { 
+  setTimeout(function() { observe_helpers() }, 500);
 });
+

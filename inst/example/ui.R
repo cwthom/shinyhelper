@@ -42,7 +42,11 @@ ui <- fluidPage(
                   value = 3, min = 1, max = 9) %>% 
         helper(icon = "exclamation",
                colour = "red",
-               content = "Clusters")
+               content = "Clusters"),
+      
+      hr(),
+      uiOutput(outputId = "dynamicUI"),
+      hr()
     ),
     
     # mainpanel with output plot
