@@ -14,7 +14,7 @@
 #' @param title The title to use for your modal. Leave as "" to have no title (for example,
 #'   if your markdown document has a header you wish to use instead).
 #' @param content If \code{type = "markdown"}, the name of your markdown file; if
-#'   \code{type = "inline"}, a character vector of text to include. This will be pasted 
+#'   \code{type = "inline"}, a character vector of text/HTML to include. This will be pasted 
 #'   together with line breaks. You need not add '.md' to the markdown filename.
 #' @param size Either 's', 'm' or 'l' - the size of the modal dialog to display.
 #' @param ... Other arguments to pass to the \code{div} containing the icon.

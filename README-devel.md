@@ -79,12 +79,13 @@ All you need now is some content for your help page. You can specify this in 2 w
 
 ### inline
 
-To specify inline content, simply set `type = "inline"` in `helper`, and supply the `title` and `content` arguments. `content` can be a character vector, in which case each element will be a new line. E.g.
+To specify inline content, simply set `type = "inline"` in `helper`, and supply the `title` and `content` arguments. `content` can be a character vector, in which case each element will be a new line. You can also use raw HTML tags to format your inline content E.g.
 
 ```
 plotOutput(outputId = "plot") %>% helper(type = "inline",
                                          title = "Plot",
-                                         content = "This is a plot.")
+                                         content = c("This is a <b>plot</b>.",
+                                                     "This is on a new line."))
 ```
 
 ### markdown
