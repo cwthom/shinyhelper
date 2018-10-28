@@ -1,8 +1,8 @@
 Package: shinyhelper
 Type: Package
 Title: Easily Add Markdown Help Files to 'shiny' App Elements
-Version: 0.3.0.9000
-Authors@R: person("Chris", "Thom", email = "christopher.w.thom@outlook.com", role=c("aut","cre"))
+Version: 0.3.0.9001
+Authors@R: person("Chris", "Mason-Thom", email = "christopher.w.thom@outlook.com", role=c("aut","cre"))
 BugReports: https://github.com/cwthom/shinyhelper/issues
 Description: Creates a lightweight way to add markdown helpfiles to 'shiny' apps,
     using modal dialog boxes, with no need to observe each help button separately.

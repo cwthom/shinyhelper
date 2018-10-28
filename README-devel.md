@@ -46,7 +46,6 @@ library(shinyhelper)
 shinyhelper_demo()
 ```
 
-
 ## Usage
 
 You can add help files to any shiny element, including all inputs and outputs, with a simple call to `helper()`:
@@ -73,6 +72,9 @@ observe_helpers()
 # observe_helpers(withMathJax = TRUE)
 
 ```
+
+Note that as of shinyhelper v0.3.1, you can define `helper`s in dynamic UI elements as well! This opens up the option to display different helpfiles depending on current input settings, improving user experience. Thanks to those who flagged this issue and waited patiently for a fix!
+
 ## Content
 
 All you need now is some content for your help page. You can specify this in 2 ways:

@@ -1,3 +1,9 @@
+### shinyhelper 0.3.0.9001
+
+New features:
+
+* helper icons now work in dynamically rendered UI
+
 ### shinyhelper 0.3.0.9000
 
 New features:
