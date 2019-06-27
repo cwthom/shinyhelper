@@ -17,6 +17,10 @@
 #'   \code{type = "inline"}, a character vector of text/HTML to include. This will be pasted 
 #'   together with line breaks. You need not add '.md' to the markdown filename.
 #' @param size Either 's', 'm' or 'l' - the size of the modal dialog to display.
+#' @param buttonLabel The text for the modal button - "Ok" by default.
+#' @param easyClose Whether the modal can be dismissed by pressing Escape, or clicking
+#'   outside the modal. Defaults to \code{TRUE}.
+#' @param fade Whether the modal has a fade in animation. Defaults to \code{FALSE}.
 #' @param ... Other arguments to pass to the \code{div} containing the icon.
 #' 
 #' @examples
@@ -33,6 +37,9 @@ helper <- function(shiny_tag,
                    title = "",
                    content = "",
                    size = "m",
+                   buttonLabel = "Okay",
+                   easyClose = TRUE,
+                   fade = FALSE,
                    ...){
   
   if (!(type %in% c("inline", "markdown"))) {
@@ -59,7 +66,10 @@ helper <- function(shiny_tag,
                                           "data-modal-size" = size,
                                           "data-modal-type" = type,
                                           "data-modal-title" = title,
-                                          "data-modal-content" = content)
+                                          "data-modal-content" = content,
+                                          "data-modal-label" = buttonLabel,
+                                          "data-modal-easyclose" = easyClose,
+                                          "data-modal-fade" = fade)
   
   help_icon <- shiny::div(help_icon,
                           class = "shinyhelper-container",
