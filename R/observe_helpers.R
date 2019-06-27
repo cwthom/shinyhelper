@@ -30,10 +30,13 @@ observe_helpers <- function(session = shiny::getDefaultReactiveDomain(),
     handlerExpr = {
       
       params <- session$input$`shinyhelper-modal_params`
-      
+      print(params)
       type <- params$type
       size <- params$size
       title <- params$title
+      label <- params$label
+      easyClose <- as.logical(params$easyClose)
+      fade <- as.logical(params$fade)
       
       if (title == "") title <- NULL
       
@@ -59,8 +62,9 @@ observe_helpers <- function(session = shiny::getDefaultReactiveDomain(),
         content,
         title = title,
         size = size,
-        easyClose = TRUE,
-        footer = shiny::modalButton("Okay")
+        easyClose = easyClose,
+        fade = fade,
+        footer = shiny::modalButton(label)
       )
       
       shiny::showModal(modal)

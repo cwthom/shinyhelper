@@ -35,7 +35,11 @@ ui <- fluidPage(
                title = "Inline Help",
                content = c("This helpfile is defined entirely in the UI!",
                            "This is on a new line.",
-                           "This is some <b>HTML</b>."),
+                           "This is some <b>HTML</b>.",
+                           "Note this modal has a different button label, fades in and is harder to close."),
+               buttonLabel = "Got it!",
+               easyClose = FALSE,
+               fade = TRUE,
                size = "s"),
       
       sliderInput(inputId = "clusters", "Cluster count",

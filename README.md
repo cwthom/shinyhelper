@@ -143,6 +143,13 @@ By default, all help files are medium sized `modalDialog()` boxes (`size = "m"`)
 plotOutput(outputId = "plot") %>% helper(size = "l")
 ```
 
+## Other Arguments - Dev version only
+
+You can also change:
+
+* the label on the `modalButton`, with the `buttonLabel` argument
+* the `easyClose` and `fade` arguments governing the behaviour of the modal
+
 ## Creating your Help Files
 
 There is also a function, `create_help_files()` to quickly create a directory of help files from a vector of names. 

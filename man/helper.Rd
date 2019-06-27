@@ -5,7 +5,8 @@
 \title{Augment a shiny.tag with a question mark helper button}
 \usage{
 helper(shiny_tag, icon = "question-circle", colour = NULL,
-  type = "markdown", title = "", content = "", size = "m", ...)
+  type = "markdown", title = "", content = "", size = "m",
+  buttonLabel = "Okay", easyClose = TRUE, fade = FALSE, ...)
 }
 \arguments{
 \item{shiny_tag}{A shiny element, such as an input or output (but any shiny tag will do).}
@@ -24,6 +25,13 @@ if your markdown document has a header you wish to use instead).}
 together with line breaks. You need not add '.md' to the markdown filename.}
 
 \item{size}{Either 's', 'm' or 'l' - the size of the modal dialog to display.}
+
+\item{buttonLabel}{The text for the modal button - "Ok" by default.}
+
+\item{easyClose}{Whether the modal can be dismissed by pressing Escape, or clicking
+outside the modal. Defaults to \code{TRUE}.}
+
+\item{fade}{Whether the modal has a fade in animation. Defaults to \code{FALSE}.}
 
 \item{...}{Other arguments to pass to the \code{div} containing the icon.}
 }

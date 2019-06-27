@@ -2,6 +2,8 @@
 
 The latest development version.
 
+* Add parameters for `fade`, `easyClose` and `buttonLabel`
+
 # shinyhelper 0.3.1
 
 Welcome to shinyhelper 0.3.1. This patch version introduces three new elements to the package, to fix bugs in 0.3.0.

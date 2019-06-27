@@ -11,6 +11,9 @@ function observe_helpers() {
       type : data.modalType,
       title : data.modalTitle,
       content : data.modalContent,
+      label : data.modalLabel,
+      easyClose : data.modalEasyclose,
+      fade : data.modalFade,
       nonce : nonce
     };
     
