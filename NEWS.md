@@ -1,6 +1,4 @@
-### shinyhelper 0.3.1.9000
-
-The latest development version.
+# shinyhelper 0.3.2
 
 * Add parameters for `fade`, `easyClose` and `buttonLabel`
 

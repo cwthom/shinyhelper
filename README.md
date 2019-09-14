@@ -18,7 +18,8 @@ The advantages of using this package are:
 
 ## Installation
 
-**shinyhelper 0.3.1 now on CRAN!** Go to: [https://cran.r-project.org/package=shinyhelper](https://cran.r-project.org/package=shinyhelper) 
+**shinyhelper 0.3.1 now on [CRAN](https://cran.r-project.org/package=shinyhelper)!** 
+
 You can install the package with:
 ```
 install.packages("shinyhelper")
@@ -73,7 +74,10 @@ observe_helpers()
 
 ```
 
-Note that as of shinyhelper v0.3.1, you can define `helper`s in dynamic UI elements as well! This opens up the option to display different helpfiles depending on current input settings, improving user experience. Thanks to those who flagged this issue and waited patiently for a fix!
+You can define `helper`s in dynamic UI elements as well, and have the help file rendered dynamically on the server side. This allows for :
+
+* conditioning which help file to show
+* defining inline content based on input settings
 
 ## Content
 
@@ -143,7 +147,7 @@ By default, all help files are medium sized `modalDialog()` boxes (`size = "m"`)
 plotOutput(outputId = "plot") %>% helper(size = "l")
 ```
 
-## Other Arguments - Dev version only
+## Other Arguments
 
 You can also change:
 

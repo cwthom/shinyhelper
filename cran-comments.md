@@ -1,3 +1,10 @@
+# shinyhelper 0.3.2
+
+## Test Environments
+* local windows 10, R 3.6.1
+* Ubuntu Trusty 14.04 (travis-ci): oldrel, release, devel
+* win-builder: oldrel, release, devel
+
 # shinyhelper 0.3.1
 
 ## Test Environments

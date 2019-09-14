@@ -30,7 +30,7 @@ observe_helpers <- function(session = shiny::getDefaultReactiveDomain(),
     handlerExpr = {
       
       params <- session$input$`shinyhelper-modal_params`
-      print(params)
+      
       type <- params$type
       size <- params$size
       title <- params$title
