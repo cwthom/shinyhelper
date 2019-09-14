@@ -2,8 +2,17 @@
 
 ## Test Environments
 * local windows 10, R 3.6.1
-* Ubuntu Trusty 14.04 (travis-ci): oldrel, release, devel
+* Ubuntu Xenial 16.04 (travis-ci): oldrel, release, devel
 * win-builder: oldrel, release, devel
+
+## R CMD Check Results
+There were no ERRORs, WARNINGs or NOTEs locally or on Travis CI. The WinBuilder raised a NOTE about the shinyapps.io URL of a demo in one of the man pages - this URL is correct.
+
+## Reverse Dependencies
+There are no reverse dependencies at this time.
+
+## Further Notes
+This release adds in a couple of extra user options requested to customise the experience.
 
 # shinyhelper 0.3.1
 
