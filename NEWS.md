@@ -1,3 +1,6 @@
+### shinyhelper 0.3.2.9000
+
+
 # shinyhelper 0.3.2
 
 * Add parameters for `fade`, `easyClose` and `buttonLabel`
