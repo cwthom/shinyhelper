@@ -10,3 +10,5 @@
 ^data-raw$
 ^revdep$
 ^README-devel.md$
+^renv$
+^renv\.lock$
