@@ -18,7 +18,7 @@ The advantages of using this package are:
 
 ## Installation
 
-**shinyhelper 0.3.1 now on [CRAN](https://cran.r-project.org/package=shinyhelper)!** 
+**shinyhelper 0.3.2 now on [CRAN](https://cran.r-project.org/package=shinyhelper)!** 
 
 You can install the package with:
 ```
