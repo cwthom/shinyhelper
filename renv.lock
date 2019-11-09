@@ -172,10 +172,10 @@
     },
     "devtools": {
       "Package": "devtools",
-      "Version": "2.2.0",
+      "Version": "2.2.1",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "9f0275db22b3a3fbf0f4d8017f370b6a"
+      "Hash": "0311cbb64e0ddee9790d8c9922dcbef1"
     },
     "digest": {
       "Package": "digest",
@@ -517,6 +517,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "830aa73278dce9beba583bfe57a5c015"
+    },
+    "renv": {
+      "Package": "renv",
+      "Version": "0.8.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "0b45cd1dfa978e60de94abd7084079a0"
     },
     "reshape2": {
       "Package": "reshape2",
