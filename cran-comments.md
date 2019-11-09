@@ -9,7 +9,7 @@
 There were no ERRORs, WARNINGs or NOTEs locally or on Travis CI. The WinBuilder raised a NOTE about the shinyapps.io URL of a demo in one of the man pages - this URL is correct.
 
 ## Reverse Dependencies
-There are no reverse dependencies at this time.
+The only reverse dependency is `tsviz`, which is unaffected by this release.
 
 ## Further Notes
 This release adds in a couple of extra user options requested to customise the experience.
