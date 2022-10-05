@@ -113,7 +113,7 @@ You can change the type of icon used and its colour, as well as passing CSS inli
 
 ### Icon
 
-The icons are `shiny::icon("question-circle")` icons by default, but you can change them individually using the `icon` argument of `helper()`:
+The icons are `shiny::icon("circle-question")` icons by default, but you can change them individually using the `icon` argument of `helper()`:
 
 ```
 plotOutput(outputId = "plot") %>% helper(icon = "exclamation")

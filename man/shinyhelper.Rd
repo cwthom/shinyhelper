@@ -3,7 +3,6 @@
 \docType{package}
 \name{shinyhelper}
 \alias{shinyhelper}
-\alias{shinyhelper-package}
 \title{shinyhelper.}
 \description{
 Easily add markdown helpfiles to your shiny apps, by adding a single function

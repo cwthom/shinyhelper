@@ -4,8 +4,11 @@
 \alias{observe_helpers}
 \title{Observe Helper Action Buttons}
 \usage{
-observe_helpers(session = shiny::getDefaultReactiveDomain(),
-  help_dir = "helpfiles", withMathJax = FALSE)
+observe_helpers(
+  session = shiny::getDefaultReactiveDomain(),
+  help_dir = "helpfiles",
+  withMathJax = FALSE
+)
 }
 \arguments{
 \item{session}{The session object in your shiny app.}
