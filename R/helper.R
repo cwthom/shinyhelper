@@ -31,7 +31,7 @@
 #'        content = "ClickHelp")  # looks for 'helpfiles/ClickHelp.md'
 #'        
 helper <- function(shiny_tag, 
-                   icon = "question-circle",
+                   icon = "circle-question",
                    colour = NULL,
                    type = "markdown",
                    title = "",

@@ -1,5 +1,7 @@
 ### shinyhelper 0.3.2.9000
 
+* Change name of font awesome question mark icon to circle-question
+inline with new icon name change
 
 # shinyhelper 0.3.2
 

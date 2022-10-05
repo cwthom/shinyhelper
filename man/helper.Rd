@@ -4,9 +4,19 @@
 \alias{helper}
 \title{Augment a shiny.tag with a question mark helper button}
 \usage{
-helper(shiny_tag, icon = "question-circle", colour = NULL,
-  type = "markdown", title = "", content = "", size = "m",
-  buttonLabel = "Okay", easyClose = TRUE, fade = FALSE, ...)
+helper(
+  shiny_tag,
+  icon = "circle-question",
+  colour = NULL,
+  type = "markdown",
+  title = "",
+  content = "",
+  size = "m",
+  buttonLabel = "Okay",
+  easyClose = TRUE,
+  fade = FALSE,
+  ...
+)
 }
 \arguments{
 \item{shiny_tag}{A shiny element, such as an input or output (but any shiny tag will do).}
