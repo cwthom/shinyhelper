@@ -21,7 +21,8 @@
 #' 
 observe_helpers <- function(session = shiny::getDefaultReactiveDomain(),
                             help_dir = "helpfiles",
-                            withMathJax = FALSE) {
+                            withMathJax = FALSE,
+                            useTheme = "shiny") {
   
   shiny::observeEvent(
     
@@ -37,6 +38,12 @@ observe_helpers <- function(session = shiny::getDefaultReactiveDomain(),
       label <- params$label
       easyClose <- as.logical(params$easyClose)
       fade <- as.logical(params$fade)
+      
+      if (!(useTheme %in% c("shiny", "bulma"))) {
+        stop("useTheme must be 'shiny' or 'bulma'")
+      } else{ 
+        this.theme = useTheme
+      }
       
       if (title == "") title <- NULL
       
@@ -57,17 +64,28 @@ observe_helpers <- function(session = shiny::getDefaultReactiveDomain(),
       } else {
         content <- shiny::HTML(params$content)
       }
+      if(this.theme == 'shiny'){
+        modal <- shiny::modalDialog(
+          content,
+          title = title,
+          size = size,
+          easyClose = easyClose,
+          fade = fade,
+          footer = shiny::modalButton(label)
+        )
       
-      modal <- shiny::modalDialog(
-        content,
-        title = title,
-        size = size,
-        easyClose = easyClose,
-        fade = fade,
-        footer = shiny::modalButton(label)
-      )
-      
-      shiny::showModal(modal)
+        shiny::showModal(modal)
+      } 
+      else if(this.theme == 'bulma'){
+        bulmaModal(
+          id = paste0('helpmodal',round(as.numeric(Sys.time()),0)),
+          list(
+            title = title,
+            body = as.character(content),
+            buttons = list(label=label,classes=c('button','is-success'))
+          )
+        )
+      }
         
     }
   )
